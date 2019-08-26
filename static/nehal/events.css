@@ -1,0 +1,15 @@
+body {
+    background: url("images/EventsBackground.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+/*h1.hey {*/
+	/*background: white;*/
+/*}*/
+ul.submenu { padding:0; margin:0; }
+ul.submenu li:after { content:"/"; padding-left:15px; }
+ul.submenu li { display:inline-block; padding-right:10px; color:#939598;  }
+ul.submenu li a{ text-transform:uppercase; color:#939598; text-decoration:none; }
+ul.submenu li a:hover, ul.submenu li a.active{ color:#000; }

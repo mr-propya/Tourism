@@ -4,6 +4,6 @@ from django.http import HttpResponse
 
 
 def index(request):
-    template = loader.get_template("nehal/iconic.html")
+    template = loader.get_template("nehal/events.html")
     """View function for home page of site."""
     return HttpResponse(template.render({}, request))
