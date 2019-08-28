@@ -13,3 +13,11 @@ ul.submenu li:after { content:"/"; padding-left:15px; }
 ul.submenu li { display:inline-block; padding-right:10px; color:#939598;  }
 ul.submenu li a{ text-transform:uppercase; color:#939598; text-decoration:none; }
 ul.submenu li a:hover, ul.submenu li a.active{ color:#000; }
+
+.events-grid { color:#fff; }
+.events-grid p { color:#fff; text-align:center; margin-top:8px; height:85px; }
+.events-grid div { margin-bottom:10px; }
+.events-grid img { margin-left:auto; margin-right:auto;}
+.events-grid span.stButton span.email, .events-grid span.sharethis {
+    color: #fff !important; margin-left:70px;
+}

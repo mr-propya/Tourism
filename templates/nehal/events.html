@@ -5,15 +5,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'nehal/events.css' %}">
 </head>
 <body>
 <img src="/static/nehal/images/events-title.png">
+<br>
+<br>
 <ul class='submenu' style="padding:0; margin:0;">
     <li> <a>Others</a> </li>
     <li> <a>Sports</a> </li>
     <li> <a>Concert</a> </li>
     <li> <a>Art</a> </li>
 </ul>
+<br>
+<br>
+ <div class="row padding-t-20">
+{% for hotel in hotel_images %}
+            <div class='col-lg-2 col-md-3 col-sm-3 col-xs-12'>
+                     <img src="{{ hotel.directUrl }}" class="img-responsive" style='background-size:cover; width:220px; height:175px;' />
+                <center><p style="color: white"><b>{{ hotel.name }}</b></p></center>
+            </div>
+    {% endfor %}
+ </div>
 </body>
 </html>
