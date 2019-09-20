@@ -1,0 +1,114 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'nehal/icon.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'nehal/jquery.mCustomScrollbar.css' %}">
+    <script src="{% static 'nehal/jquery.mCustomScrollbar.concat.min.js' %}"  type="text/javascript"></script>
+     <script src="{% static 'nehal/jquery-1.11.0.min.js' %}"  type="text/javascript"></script>
+</head>
+<body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<div class="row padding-t-20 tour-push-bottom">
+{% for icon in icon_places %}
+<div class="col-lg-5">
+    <div class="iconic-img" style="background: url({{ icon.directUrl }}) center top / cover no-repeat; height: 350px;margin-left:1.0in " id="experience-img"></div></div>
+<div class="col-lg-5 experience-description" id="iconics-detail" style="height: 350px;margin-left: 1.0in">
+    <h2>ASHRAM DINING ROOM</h2>
+    <div class="expdesc-scroll descripdiv mCustomScrollbar _mCS_1" style="color: rgb(255, 255, 255);">
+        <div class="mCustomScrollBox mCS-light" id="mCSB_1" style="position:relative; height:100%; overflow:hidden; max-width:100%;"><div class="mCSB_container" style="position: relative; top: 0px;">
+            <p>Ashram Dining Room has prepared the food for Ashramites and their
+guests since 1934. Even after many reconstructions, it reflects its
+architectural heritage. It is great to have a look when the gate is open
+ at meal times.</p>
+        <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:1.0in;margin-bottom:.0001pt;text-indent:-1.0in;line-height:150%">For more information please visit -<span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin" lang="EN-IN"><br></span></p>
+        <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:1.0in;margin-bottom:.0001pt;text-indent:-1.0in;line-height:150%"><span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin" lang="EN-IN">Bureau Central, Information Centre of Sri Aurobindo Ashram, Cottage Complex</span></p>
+        <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:150%"><span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin" lang="EN-IN"><br></span></p>
+        <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:150%"><span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin" lang="EN-IN">Location:<span style="mso-tab-count:1"> </span>3 Rangapillai St., Puducherry 605001</span><span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin" lang="EN-IN"><br></span></p>
+        <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:150%"><span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin" lang="EN-IN">Phone:&nbsp;<span style="mso-tab-count:2"></span>0413-2233604/</span><span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin" lang="EN-IN"></span><span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin" lang="EN-IN">2339648<br></span></p>
+        <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:150%"><span style="mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin" lang="EN-IN">Timings:&nbsp;<span style="mso-tab-count:1"></span>6am - 8pm daily</span></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="line-height: 21px;">Working Hours: 6am to 8pm (all days)</span></p>
+        <p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="line-height: 21px;">email: bureaucentral@sriaurobindoashram.org</span></p><br><br>Francois Martin Street<br>Puducherry<br>Puducherry<br><br></div><div class="mCSB_scrollTools" style="position: absolute; display: block;"><div class="mCSB_draggerContainer"><div class="mCSB_dragger" style="position: absolute; height: 93px; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="position: relative; line-height: 93px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div> <br><br> <a href="#" class="add-to-planner pull-right">Add to Planner</a>
+</div>
+    {% endfor %}
+</div>
+</center>
+<script type="text/javascript">
+		$.fn.equalizeHeights = function(){
+		return this.height( Math.max.apply(this, $(this).map(function(i,e){ return $(e).height() }).get() ) )
+		}
+		$('#experience-img, #iconics-detail, #map_canvas').equalizeHeights();
+
+		//alert($('#experience-detail').height() - 44);
+    </script>
+<script>
+		(function($){
+			$(window).load(function(){
+				$(".expdesc-scroll").mCustomScrollbar();
+			});
+		})(jQuery);
+	</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+	$(".descripdiv").css("color","#fff");
+	document.title=dyn_title;
+	/*$(".contdiv").css("display","none");
+
+	$("#contactinfo_0,#contactinfo_1").click(function(){
+			//alert(contactinfo);
+				$("#about_0,#about_1").removeClass("active");
+				$("#contactinfo_0,#contactinfo_1").addClass("active");
+				//$(".expdesc-scroll").php('').css('color','#fff');
+				$(".contdiv").css("display","block").css('color','#fff');
+				$(".descripdiv").css("display","none");
+
+			});
+	$("#about_0,#about_1").click(function(){
+
+
+		//$(".expdesc-scroll").php('');
+		$(".descripdiv").css("display","block").css('color','#fff');
+		$(".contdiv").css("display","none");
+
+		//$(".expdesc-scroll").mCustomScrollbar("update");
+		$("#about_0,#about_1").addClass("active");
+		$("#contactinfo_0,#contactinfo_1").removeClass("active");
+
+	});*/
+	});
+    function initialize()
+    { //alert(s1);
+	  //alert(lat,lng);
+        var latlng1 = new google.maps.LatLng(lat,lng);
+
+        var myOptions =
+        {
+            zoom: 17,
+            center: latlng1,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+        var marker = new google.maps.Marker({position: latlng1,map: map});
+    }
+
+	function go_nearby()
+	{
+	 window.location="nearby.php";
+	}
+
+    </script>
+
+</body>
+</html>

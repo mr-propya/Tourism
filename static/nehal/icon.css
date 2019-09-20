@@ -1,0 +1,46 @@
+body {
+    background: url("images/IconicBackground.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+.experience-description {
+	background:#8f8350;
+	color:#19345a;
+}
+.experience-description h2{ color:#19345a; padding:0; padding-top:5px; }
+.experience-description p{ color:#fff; }
+.experience-description-butn .btn-group { padding:0 2px 0 2px; }
+.experience-description-butn .btn-group:first-child { padding-left:0; }
+.experience-description-butn .btn-group:last-child { padding-right:0; }
+.experience-description-butn button {
+	background:#3a4a67;
+	border-radius:0;
+	color:#FFF;
+	text-transform:uppercase;
+	overflow:hidden;
+}
+.add-to-planner {
+	background:#3a4a67;
+	padding:5px;
+	color:#ffffff;
+	border:1px solid #c4bfa6;
+	text-decoration:none;
+	font-size:14px;
+	position:absolute;
+	bottom:20px;
+	right:25px;
+}
+.add-to-planner:hover {
+	text-decoration:none;
+	color:#CCC;
+	background:#253148;
+}
+.expdesc-scroll {
+	height:230px;
+	border:0px solid #F00;
+}
+#iconics-detail {
+	max-height:350px;
+}

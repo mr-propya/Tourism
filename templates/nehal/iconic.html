@@ -6,6 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="{% static 'nehal/iconic.css' %}">
 </head>
 <body>
@@ -25,6 +26,18 @@
             <li style="display:inline-block; padding-right:2px; color:#939598; padding-bottom:10px; "><a style=" text-transform:uppercase; font-family: Cambria;  color:#fff; text-decoration:none; font-size:12px; padding:5px 10px; background:rgba(0,0,0,.90);">ARCHEOLOGICAL SITES</a></li>
         </ul>
     </center>
+</div>
+<div class="row padding-t-10 iconics-para">
+<center>
+    {% for iconic in iconic_places %}
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+            <a href=" "><div class="iconics" style="background:url({{ iconic.directUrl }})no-repeat; background-position:50% 50%; background-size: cover;"></div></a>
+            <h4>{{ iconic.name}}</h4>
+            <div class="parag">{{iconic.description}}</div>
+            <a href="/templates/nehal/icon.html">Read more</a>
+        </div>
+    {% endfor %}
+</center>
 </div>
 </body>
 </html>

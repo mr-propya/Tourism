@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'apps.events',
     'apps.iconic',
     'apps.gallery',
+    'apps.icon',
 ]
 
 MIDDLEWARE = [
