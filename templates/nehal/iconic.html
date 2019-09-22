@@ -34,7 +34,7 @@
             <a href=" "><div class="iconics" style="background:url({{ iconic.directUrl }})no-repeat; background-position:50% 50%; background-size: cover;"></div></a>
             <h4>{{ iconic.name}}</h4>
             <div class="parag">{{iconic.description}}</div>
-            <a href="/templates/nehal/icon.html">Read more</a>
+            <a href="{% url 'about' %}">Read more</a>
         </div>
     {% endfor %}
 </center>

@@ -10,3 +10,8 @@ def index(request):
         template = loader.get_template('nehal/iconic.html')
         context = {'iconic_places': iconic}
         return HttpResponse(template.render(context,request))
+
+
+def about(request):
+    template = loader.get_template('nehal/icon.html')
+    return HttpResponse(template.render({},request))

@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'apps.iconic',
     'apps.gallery',
     'apps.icon',
+    'apps.experience',
+    'apps.festival',
 ]
 
 MIDDLEWARE = [
