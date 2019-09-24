@@ -20,6 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('icon/',include('apps.icon.urls')),
     path('about/', include('apps.iconic.urls')),
+    path('eventExplore/',include('apps.events.urls')),
     path('gallery/', include('apps.gallery.urls')),
     path('iconic/', include('apps.iconic.urls')),
     path('home/', include('apps.home.urls')),

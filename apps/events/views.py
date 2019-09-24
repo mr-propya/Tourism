@@ -10,3 +10,8 @@ def index(request):
         template = loader.get_template('nehal/events.html')
         context = {'hotel_images': Event}
         return HttpResponse(template.render(context,request))
+
+
+def eventExplore(request):
+    template = loader.get_template('nehal/eventExplore.html')
+    return HttpResponse(template.render({},request))

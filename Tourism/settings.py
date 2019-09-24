@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'apps.gallery',
     'apps.icon',
     'apps.experience',
+    'apps.eventExplore',
     'apps.festival',
 ]
 

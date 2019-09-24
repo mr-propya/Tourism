@@ -1,0 +1,41 @@
+body {
+    background: url("images/EventsBackground.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+.img-fullwidth {
+	width:100%;
+	height:auto;
+}
+.events-contents { color:#FFF; }
+.events-contents h2 { padding:0; margin:0; margin-bottom:10px; font-size:24px; font-weight:bold; }
+.events-contents p, .events-contents span  { color:#fff !important; text-align:justify; padding:0; }
+.events-contents p a, .events-content-scroller a { color:#2e8bca;}
+
+.events-contents span.stButton span.email, .events-contents span.sharethis {
+    color: #fff !important;
+}
+.add-to-planner4  {
+	background:#3a4a67;
+	padding:5px;
+	color:white;
+	border:1px solid #c4bfa6;
+	text-decoration:none;
+	font-size:14px;
+
+}
+
+.push-right-10 {
+	margin-right:20px;
+}
+
+.add-to-planner4:hover {
+	text-decoration:none;
+	color:#CCC;
+	background:#253148;
+}
+.events-contents .list-next-events div span { display:block; padding:5px 10px; background-color:rgba(0,0,0,0.50); margin-bottom:5px; }
+
+.events-thums .col-xs-3, .events-thums .col-xs-6 { }

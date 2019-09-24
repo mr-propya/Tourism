@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'nehal/eventExplore.css' %}">
+</head>
+<body>
+<img src="/static/nehal/images/events-title.png">
+<br>
+<br>
+<div class="row padding-t-20 events-contents">
+<div class="col-lg-4 col-md-4 col-sm-6">
+			 <img id="main_img" src="/static/nehal/images/Sizzler.jpg" class="img-fullwidth img-responsive">
+                <div class="row padding-t-10 padding-b-10 events-thums"><div id="img1" class="col-xs-3 event-thum event_img_hover" onclick="show_image(this.id);"><img src="/static/nehal/images/Sizzler.jpg" class="img-responsive img-fullwidth"></div><a href="http://maps.google.com/?q=," target="_blank"><div class="col-xs-6"><div id="map_canvas"></div></div></a>
+
+                </div> <br>
+                <a href="#" class="add-to-planner4 push-right-10">Add to Planner</a> <span class="st_sharethis" displaytext="ShareThis" st_processed="yes"><span style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;" class="stButton"><span class="chicklets sharethis">ShareThis</span></span></span>  <br>
+</div>
+    <div class="col-lg-4 col-md-4 col-sm-6 ">
+        		<h2>Sizzler fest</h2>
+                <div class="events-content-scroller mCustomScrollbar _mCS_1"><div class="mCustomScrollBox mCS-light" id="mCSB_1" style="position:relative; height:100%; overflow:hidden; max-width:100%;"><div class="mCSB_container mCS_no_scrollbar" style="position: relative; top: 0px;"><b>Start Date : </b>2019-05-10<br><b>Start Time : </b>12:00:00<br><b>End Date : </b>2019-05-19<br><b>End Time : </b>23:00:00<br><br>Sizzler fest Get set to tantalize your taste buds with Sizzler Fest at Blue Line restaurant in The Promenade. Choose from the exclusive menu of veg/non-veg sizzling dishes and get a complimentary glass of beer to steam up the night.<br><br><b>Venue : </b>Sizzler fest<br><b>Address : </b>The Promenade, 23, Goubert Avenue <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pondicherry<br><br></div><div class="mCSB_scrollTools" style="position: absolute; display: none;"><div class="mCSB_draggerContainer"><div class="mCSB_dragger" style="position: absolute; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="position:relative;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>            </div>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-12 list-next-events">
+            	<div> <span style="display:block; padding:5px 10px; background-color:rgba(0,0,0,0.50); margin-bottom:5px;"> Previous Event </span>
+                	<a href=""><img src="upload/files/Karaoke.jpg" class="img-fullwidth img-responsive"></a>
+                	<h2 style="padding:0; margin:0; margin-bottom:10px; font-size:24px; font-weight:bold; ">World Karaoke Week</h2>
+                	<p style="color:#fff !important; text-align:justify; padding:0;">World Karaoke Week World Karaoke Week celebration at the Providence Mall Pondicherry on 29th April. Registration&nbsp;<a href="events-innerpage.php?id=1038&amp;district=Puducherry&amp;category=158">Read more</a> </p>                </div>
+                <div> <span style="display:block; padding:5px 10px; background-color:rgba(0,0,0,0.50); margin-bottom:5px;"> Next Event </span>
+                	<a href=""><img src="upload/files/Red Earth.jpg" class="img-fullwidth img-responsive"></a>
+                	<h2 style="padding:0; margin:0; margin-bottom:10px; font-size:24px; font-weight:bold; ">Red Earth Riding School</h2>
+                	<p style="color:#fff !important; text-align:justify; padding:0;">Red Earth Riding School Red Earth Riding School is here with something new!    Introducing the 'KIDS HORSE RIDING<a href="events-innerpage.php?id=1040&amp;district=Puducherry&amp;category=158"> Read more</a> </p>                </div>
+            </div>
+</body>
+</html>
