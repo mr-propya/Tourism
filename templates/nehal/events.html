@@ -1,30 +1,179 @@
 {% load static %}
-<html lang="en">
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="{% static 'nehal/events.css' %}">
-</head>
-<body>
-<img src="/static/nehal/images/events-title.png">
-<br>
-<br>
-<ul class='submenu' style="padding:0; margin:0;">
-    <li> <a>Others</a> </li>
-    <li> <a>Sports</a> </li>
-    <li> <a>Concert</a> </li>
-    <li> <a>Art</a> </li>
+
+
+
+    <title>Events in Pondicherry- Sports, Yoga, Arts Events in Pondy 2016</title>
+	<meta name="Description" content="Event in Pondicherry - Event Plan & Venue for the Events such as Festival, Arts, Yoga, Food, Sports & Cultural Events 2016 in Pondicherry." />
+
+	<meta name="Keywords" content="Festivals, Events, Theater, Dance, Sports, Music, Concerts, Yoga, Food" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://www.pondytourism.in/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="http://www.pondytourism.in/css/custom-style.css" rel="stylesheet" media="screen">
+    <link type="text/css" rel="stylesheet" href="http://www.pondytourism.in/css/lightGallery.css" />
+	<link rel="shortcut icon" href="http://www.pondytourism.in/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="http://www.pondytourism.in/favicon.ico" type="image/x-icon">
+
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+
+   <style>
+
+a.flight-time:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(http://www.pondytourism.in/images/flight.png) no-repeat;
+    width: 100px;
+    height: 40px;
+    background-size: 80%;
+}
+a.flight-time span{
+    visibility: hidden;
+}
+
+</style>
+  </head>
+       <style type="text/css">body{background: url('http://www.pondytourism.in/upload/files/4a11be3898d436e8aac7a04a46327d34.jpeg') no-repeat center center fixed; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;	background-size: cover;}</style>
+
+  <body>
+    <div class="container-fluid">
+        <div class="visible-xs visible-md visible-sm padding-t-10" id="logo3"> <center> <a href="http://www.pondytourism.in/index.php"><img src="http://www.pondytourism.in/images/pondicherry-logo.png"></a> </center> </div>
+    	<div class="row padding-t-10 topnav">
+        	<div class="hidden-sm hidden-xs hidden-md col-lg-1" id="logo2"> <center><a href="http://tourism.puducherry.gov.in/"><img src="http://www.pondytourism.in/images/emblem2.png"></a></center>  </div>
+            <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+
+                      <div class="navbar navbar-default padding-0" role="navigation">
+                        <div class="container">
+                          <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                            </button>
+
+                          </div>
+                          <div class="navbar-collapse collapse">
+
+<ul class="nav navbar-nav">
+<li> <a href="http://www.pondytourism.in/about-us.php"> About</a></li>
+<li> <a href="{% url 'iconic' %}"> Iconic </a></li>
+<li> <a href="events.html" class="active"> Events </a></li>
+<li> <a href="{% url 'festival' %}"> Festivals</a></li>
+<li> <a href="{% url 'experience' %}"> Experience </a></li>
+<li> <a href="{% url 'nearby' %}"> Nearby </a></li>
+<li> <a href="http://www.pondytourism.in/tour-packages.php"> Tours </a></li>
+<li> <a href="http://www.pondytourism.in/directory.php"> Directory </a></li>
+<li> <a href="http://www.pondytourism.in/gallery-photo.php"> Gallery </a></li>
+<li> <a href="http://www.pondytourism.in/trip-planner.php"> Trip Planner </a></li>
+<li class="travel-tip"> <a href="http://www.pondytourism.in/learn-tamil.php" target="_blank">Travel & Tips </a></li>
+<li> <a class="flight-time" href="http://www.pondytourism.in/flight-timings.php" target="_blank"><span>Flight Timing </span></a></li>
 </ul>
-<br>
-<br>
- <div class="row padding-t-20">
-{% for hotel in hotel_images %}
-            <div class='col-lg-2 col-md-3 col-sm-3 col-xs-12'>
-                <a href="{% url 'eventExplore' %}"> <img src="{{ hotel.directUrl }}" class="img-responsive" style='background-size:cover; width:220px; height:175px;' /></a>
-                <center><p style="color: white"><b>{{ hotel.name }}</b><br>"Date : {{ hotel.startDate }}"</p></center>
+                          </div>
+                        </div>
+                      </div>
+
+
             </div>
-    {% endfor %}
- </div>
-</body>
+        	<div class="hidden-sm hidden-xs hidden-md col-lg-1" id="logo2"> <center> <a href="http://www.pondytourism.in/index.php"><img src="http://www.pondytourism.in/images/pondicherry-logo3.png"></a> </center> </div>
+
+        </div> <div class="visible-lg visible-md"><a href="#" id="menu-handle2"><img src="http://www.pondytourism.in/images/menu.jpg" class="off" style="display:none;"></a><a href="#" id="showmenu2"><img src="http://www.pondytourism.in/images/menu-on.jpg" class="on"></a></div>
+       	<ul class='submenu_cat'><li class='active_mnu'> <a href='http://www.pondytourism.in/events.php?district=Puducherry'>Puducherry</a> </li><li> <a href='http://www.pondytourism.in/events.php?district=Karaikal'>Karaikal</a> </li><li> <a href='http://www.pondytourism.in/events.php?district=Mahe'>Mahe</a> </li><li> <a href='http://www.pondytourism.in/events.php?district=Yanam'>Yanam</a> </li></ul>        <div class="row padding-t-20 events-grid"> <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> <img src="http://www.pondytourism.in/images/events-title.png"> </div> </div>
+        <ul class='submenu'><li class='active_mnu'> <a href='http://www.pondytourism.in/events.php?district=Puducherry&amp;category=158'>Others</a> </li><li> <a href='http://www.pondytourism.in/events.php?district=Puducherry&amp;category=56'>Sports</a> </li><li> <a href='http://www.pondytourism.in/events.php?district=Puducherry&amp;category=55'>Concert</a> </li><li> <a href='http://www.pondytourism.in/events.php?district=Puducherry&amp;category=54'>Art</a> </li></ul>
+        <div class="row padding-t-20 events-grid">
+	<div class='col-lg-2 col-md-3 col-sm-3 col-xs-12'>
+    					 <a href='http://www.pondytourism.in/events-innerpage.php?id=1046&amp;district=Puducherry&amp;category=158'><img src='http://www.pondytourism.in/upload/files/thumbnail/PHOTOGRAPHY_CONTEST_01.jpg' class='img-fullwidth img-responsive' style='background-size:cover; width:220px; height:175px;'></a>
+    					 <p><b>PHOTOGRAPHY CONTEST</b></div><div class='col-lg-2 col-md-3 col-sm-3 col-xs-12'>
+    					 <a href='http://www.pondytourism.in/events-innerpage.php?id=1047&amp;district=Puducherry&amp;category=158'><img src='http://www.pondytourism.in/upload/files/thumbnail/PROMO_VIDEO_01.jpg' class='img-fullwidth img-responsive' style='background-size:cover; width:220px; height:175px;'></a>
+    					 <p><b>PROMO VIDEO CONTEST</b></div><div class='col-lg-2 col-md-3 col-sm-3 col-xs-12'>
+    					 <a href='http://www.pondytourism.in/events-innerpage.php?id=1048&amp;district=Puducherry&amp;category=158'><img src='http://www.pondytourism.in/upload/files/thumbnail/TREASURE_HUNT_01.jpg' class='img-fullwidth img-responsive' style='background-size:cover; width:220px; height:175px;'></a>
+    					 <p><b>TREASURE HUNT</b></div><div class='col-lg-2 col-md-3 col-sm-3 col-xs-12'>
+    					 <a href='http://www.pondytourism.in/events-innerpage.php?id=1039&amp;district=Puducherry&amp;category=158'><img src='http://www.pondytourism.in/upload/files/thumbnail/Sizzler.jpg' class='img-fullwidth img-responsive' style='background-size:cover; width:220px; height:175px;'></a>
+    					 <p><b>Sizzler fest</b><br>Date : 10-05-2019</p><!--<span class='st_sharethis' displayText='ShareThis'></span>--> </div><div class='col-lg-2 col-md-3 col-sm-3 col-xs-12'>
+    					 <a href='http://www.pondytourism.in/events-innerpage.php?id=1040&amp;district=Puducherry&amp;category=158'><img src='http://www.pondytourism.in/upload/files/thumbnail/Red Earth.jpg' class='img-fullwidth img-responsive' style='background-size:cover; width:220px; height:175px;'></a>
+    					 <p><b>Red Earth Riding</b><br>Date : 08-05-2019</p><!--<span class='st_sharethis' displayText='ShareThis'></span>--> </div><div class='col-lg-2 col-md-3 col-sm-3 col-xs-12'>
+    					 <a href='http://www.pondytourism.in/events-innerpage.php?id=1041&amp;district=Puducherry&amp;category=158'><img src='http://www.pondytourism.in/upload/files/thumbnail/LVC.jpg' class='img-fullwidth img-responsive' style='background-size:cover; width:220px; height:175px;'></a>
+    					 <p><b>LVC Presents Talk</b><br>Date : 05-05-2019</p><!--<span class='st_sharethis' displayText='ShareThis'></span>--> </div><div class='col-lg-2 col-md-3 col-sm-3 col-xs-12'>
+    					 <a href='http://www.pondytourism.in/events-innerpage.php?id=1042&amp;district=Puducherry&amp;category=158'><img src='http://www.pondytourism.in/upload/files/thumbnail/Kira.jpg' class='img-fullwidth img-responsive' style='background-size:cover; width:220px; height:175px;'></a>
+    					 <p><b>Kira Kozhambu</b><br>Date : 05-05-2019</p><!--<span class='st_sharethis' displayText='ShareThis'></span>--> </div><div class='col-lg-2 col-md-3 col-sm-3 col-xs-12'>
+    					 <a href='http://www.pondytourism.in/events-innerpage.php?id=1043&amp;district=Puducherry&amp;category=158'><img src='http://www.pondytourism.in/upload/files/thumbnail/Golden.jpg' class='img-fullwidth img-responsive' style='background-size:cover; width:220px; height:175px;'></a>
+    					 <p><b>Golden Queen of</b><br>Date : 05-05-2019</p><!--<span class='st_sharethis' displayText='ShareThis'></span>--> </div><div class='col-lg-2 col-md-3 col-sm-3 col-xs-12'>
+    					 <a href='http://www.pondytourism.in/events-innerpage.php?id=1044&amp;district=Puducherry&amp;category=158'><img src='http://www.pondytourism.in/upload/files/thumbnail/French-films.jpg' class='img-fullwidth img-responsive' style='background-size:cover; width:220px; height:175px;'></a>
+    					 <p><b>French Films</b><br>Date : 05-05-2019</p><!--<span class='st_sharethis' displayText='ShareThis'></span>--> </div><div class='col-lg-2 col-md-3 col-sm-3 col-xs-12'>
+    					 <a href='http://www.pondytourism.in/events-innerpage.php?id=1045&amp;district=Puducherry&amp;category=158'><img src='http://www.pondytourism.in/upload/files/thumbnail/dj-storyteller.jpg' class='img-fullwidth img-responsive' style='background-size:cover; width:220px; height:175px;'></a>
+    					 <p><b>Saturdays ft DJ</b><br>Date : 04-05-2019</p><!--<span class='st_sharethis' displayText='ShareThis'></span>--> </div><div class='col-lg-2 col-md-3 col-sm-3 col-xs-12'>
+    					 <a href='http://www.pondytourism.in/events-innerpage.php?id=1035&amp;district=Puducherry&amp;category=158'><img src='http://www.pondytourism.in/upload/files/thumbnail/mangohil-may.jpg' class='img-fullwidth img-responsive' style='background-size:cover; width:220px; height:175px;'></a>
+    					 <p><b>Baking People Happy</b><br>Date : 01-05-2019</p><!--<span class='st_sharethis' displayText='ShareThis'></span>--> </div><div class='col-lg-2 col-md-3 col-sm-3 col-xs-12'>
+    					 <a href='http://www.pondytourism.in/events-innerpage.php?id=1037&amp;district=Puducherry&amp;category=158'><img src='http://www.pondytourism.in/upload/files/thumbnail/Porishor.jpg' class='img-fullwidth img-responsive' style='background-size:cover; width:220px; height:175px;'></a>
+    					 <p><b>Porishor</b><br>Date : 01-05-2019</p><!--<span class='st_sharethis' displayText='ShareThis'></span>--> </div>
+
+        </div>
+			<div style="position: relative; width: 80%; background-color:none; margin: 0 auto; text-align: center; margin-top: 20px;"><ul class="pagination"><li class="disabled"><a>&laquo;</a></li><li class="active"><span>1</span></li><li><a href="http://www.pondytourism.in/events.php?page=2&amp;district=Puducherry&amp;category=158">2</a></li><li><a href="http://www.pondytourism.in/events.php?page=3&amp;district=Puducherry&amp;category=158">3</a></li><li><a href="http://www.pondytourism.in/events.php?page=4&amp;district=Puducherry&amp;category=158">4</a></li><li><a href="http://www.pondytourism.in/events.php?page=5&amp;district=Puducherry&amp;category=158">5</a></li><li><a href="http://www.pondytourism.in/events.php?page=6&amp;district=Puducherry&amp;category=158">6</a></li><li><a href="http://www.pondytourism.in/events.php?page=7&amp;district=Puducherry&amp;category=158">7</a></li><li><a href="http://www.pondytourism.in/events.php?page=8&amp;district=Puducherry&amp;category=158">8</a></li><li><a href="http://www.pondytourism.in/events.php?page=9&amp;district=Puducherry&amp;category=158">9</a></li><li><a href="http://www.pondytourism.in/events.php?page=10&amp;district=Puducherry&amp;category=158">10</a></li><li><a href="http://www.pondytourism.in/events.php?page=11&amp;district=Puducherry&amp;category=158">11</a></li><li><a href="http://www.pondytourism.in/events.php?page=12&amp;district=Puducherry&amp;category=158">12</a></li><li><a href="http://www.pondytourism.in/events.php?page=13&amp;district=Puducherry&amp;category=158">13</a></li><li><a href="http://www.pondytourism.in/events.php?page=14&amp;district=Puducherry&amp;category=158">14</a></li><li><a href="http://www.pondytourism.in/events.php?page=15&amp;district=Puducherry&amp;category=158">15</a></li><li><a href="http://www.pondytourism.in/events.php?page=16&amp;district=Puducherry&amp;category=158">16</a></li><li><a href="http://www.pondytourism.in/events.php?page=17&amp;district=Puducherry&amp;category=158">17</a></li><li><a href="http://www.pondytourism.in/events.php?page=18&amp;district=Puducherry&amp;category=158">18</a></li><li><a href="http://www.pondytourism.in/events.php?page=2&amp;district=Puducherry&amp;category=158">&raquo;</a></li></ul></div>
+
+        <div class="row footer">
+        	<div class="container-fluid footer-bg padding-t-50 colorit-grey">
+            <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12 padding-b-10">
+            	<a href="http://www.pondytourism.in/interactive-map/index.html" target='_blank'>Interactive Map</a> | <a href="http://www.pondytourism.in/media.php">Media</a> | <a href="http://www.pondytourism.in/contact-us.php">Contact</a> | <a href="http://www.pondytourism.in/travel-tips.php">Tips</a> | <a href="http://www.pondytourism.in/faq.php">FAQ</a> | <a href="http://www.pondytourism.in/feedback.php">Feedback</a> | <a href="http://www.pondytourism.in/sitemap.php">Sitemap</a>
+
+				<br><br>
+
+            <span style='background-color:#edebec; border:1px solid #231f20; padding:3px 6px;'>Visitors Count:&nbsp;5269313</span>			<!--<a href="http://www.holidayiq.com/states/pondicherry/" target="_blank"><img src="images/holiday-iq-lgo.png"></a>-->
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 padding-b-10"> <div class="padding-t-5 text-center cpy_rgt1">
+
+			<iframe src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpondytourism.in&amp;width=80&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:21px;" allowTransparency="true"></iframe> <br>
+			<a href="https://www.facebook.com/pondytourism.in" target="_blank"><img src="http://www.pondytourism.in/images/fb.png"></a> <a href="https://twitter.com/pondytourism" target="_blank"><img src="http://www.pondytourism.in/images/twitter.png"></a>  <a href="https://www.youtube.com/user/pondytourism" target="_blank"><img src="http://www.pondytourism.in/images/youtube.png"></a> <a href="https://plus.google.com/u/0/+PudhucherryTourismDepartmentofficial/about" target="_blank"><img src="http://www.pondytourism.in/images/google.png"></a> <a href="http://www.pinterest.com/pondytourism/" target="_blank"><img src="http://www.pondytourism.in/images/pinterest.png"></a> <br><br>
+					Get the latest news <br> <input type="text" class="subs-txt"> <button class="subs-btn">Subscribe </button></div> </div>
+            <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12 cpy_rgt">
+            	<a href="http://tourism.puducherry.gov.in/" target="_blank">Department of Tourism</a>, Government of Puducherry<br><br>
+                designed & developed by <br><a href="http://www.theredhash.com/" target="_blank"><img src="http://www.pondytourism.in/images/theredhashlogo.png"></a>
+            </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="http://www.pondytourism.in/js/jquery-1.11.0.min.js"></script>
+    <script src="http://www.pondytourism.in/js/bootstrap.min.js"></script>
+    <script src="http://www.pondytourism.in/js/custom-functions.js"></script>
+	<script src="../cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script>
+
+// tourpondy analystics
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47863969-1', 'auto');
+  ga('create', 'UA-55159139-1', 'auto', {'name': 'newTracker'});
+
+  ga('send', 'pageview');
+  ga('newTracker.send', 'pageview');
+
+</script>
+
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	var google_conversion_id = 962262934;
+	var google_custom_params = window.google_tag_params;
+	var google_remarketing_only = true;
+	/* ]]> */
+	</script>
+	<script type="text/javascript" src="../www.googleadservices.com/pagead/f.txt">
+	</script>
+	<noscript>
+	<div style="display:inline;">
+	<img height="1" width="1" style="border-style:none;" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/962262934/?value=0&amp;guid=ON&amp;script=0"/>
+	</div>
+	</noscript>
+  </body>
+
 </html>

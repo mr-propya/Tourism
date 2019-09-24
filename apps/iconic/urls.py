@@ -6,7 +6,11 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('about/', views.about, name="about")
+    path('about/', views.about, name="about"),
+    path('festival/', views.festival, name="festival"),
+    path('events/', views.events, name="events"),
+    path('experience/', views.experience, name="experience"),
+    path('nearby/', views.nearby, name="nearby"),
 ]
 
 if settings.DEBUG:

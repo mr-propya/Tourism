@@ -15,3 +15,19 @@ def index(request):
 def about(request):
     template = loader.get_template('nehal/icon.html')
     return HttpResponse(template.render({},request))
+
+def festival(request):
+    template = loader.get_template('nehal/festival.html')
+    return HttpResponse(template.render({},request))
+
+def events(request):
+    template = loader.get_template('nehal/events.html')
+    return HttpResponse(template.render({},request))
+
+def experience(request):
+    template = loader.get_template('nehal/experience.html')
+    return HttpResponse(template.render({},request))
+
+def nearby(request):
+    template = loader.get_template('nehal/nearby.html')
+    return HttpResponse(template.render({},request))
