@@ -1,23 +1,429 @@
-{% load static %}
+<!DOCTYPE html>
 
-<html lang="en">
+<html>
+  
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
-    <meta charset="UTF-8">
-     <link rel="stylesheet" type="text/css" href="{% static 'muskan/home.css' %}">
-    <title>Title</title>
-</head>
-<body background=".../static/muskan/images/home.jpg">
-<div class="topnav">
-  <a class="active" href="#home">Home</a>
-  <a href="#news">Events</a>
-  <a href="#contact">gallery</a>
-  <a href="#about">trip planner</a>
-</div>
 
-<div style="padding-left:16px">
+    
+    <title>Pondicherry Tourism - Travel guide, Places to visit in Puducherry</title>
+    	<meta name="Description" content="Pondicherry Tourism - Travel guide, Things to in Pondicherry, places to visit in Pondicherry. PondyTourism is an official tourism website of Puducherry Govt." />
+<meta name="p:domain_verify" content="8e555643b43eea0c80d4d440ba5b1ea9"/>
+    
+	<meta name="Keywords" content="pondicherry, puducherry, pondy, tourism, food, french, france, india, south india, heritage, british, dutch, portugal, tamil, culture, creole, world cuisines, resorts, beach resorts, luxury, mid scale, budget, guest houses, sri aurobindo ashram, auroville, sri aurobindo society, sea side, beach, temple, church, mosque, spiritual, spirituality, religion, islam, christianity, land of pi, movies, destination, scuba diving, surfing, solar power, green, light house, gandhi, historical, peaceful, give time a break, relaxing, ayurveda, medicine, homeopathy, rejuvenation, alternate healing therapies, mother, siddhar temples, roman, ancient settlements, aayi mandapam, napolean, education, mice, medical tourism, lycee, alliance, cosmopolitan" />
+	<meta http-equiv="X-FRAME-OPTIONS" content="SAMEORIGIN">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<link href="http://www.pondytourism.in/css/bootstrap.min.css" rel="stylesheet" media="screen">
 
-</div>
+    <link href="http://www.pondytourism.in/css/custom-style.css" rel="stylesheet" media="screen">
+	<link rel="shortcut icon" href="http://www.pondytourism.in/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="http://www.pondytourism.in/favicon.ico" type="image/x-icon">
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 
-<h1>Hello and welcome to home!</h1>
-</body>
+    <!--[if lt IE 9]>
+
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    <![endif]-->
+
+    <!--<script type="text/javascript"> 
+	var totalCount = 4;
+	function ChangeIt() 
+	{
+	var num = Math.ceil( Math.random() * totalCount );
+	document.body.background = 'images/bg/'+num+'.jpg';
+	document.body.style.backgroundSize = "cover";
+	}
+	</script>-->
+
+<style>
+
+a.flight-time:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(http://www.pondytourism.in/images/flight.png) no-repeat;
+    width: 100px;
+    height: 40px;
+    background-size: 80%;
+}
+a.flight-time span{
+    visibility: hidden;
+}
+
+
+</style>
+
+  </head>
+
+  
+
+  <body class="home" > 
+
+    <div class="container-fluid">
+
+    <div class="visible-xs visible-md visible-sm padding-t-10" id="logo3"> <center> <a href="http://www.pondytourism.in/index.php"><img src="http://www.pondytourism.in/images/pondicherry-logo.png"></a> </center> </div>
+
+    	<div class="row padding-t-10 topnav2">
+
+        	<div class="hidden-sm hidden-xs hidden-md col-lg-1" id="logo2"> <center><a href="http://tourism.puducherry.gov.in/"><img src="http://www.pondytourism.in/images/emblem2.png"></a></center>  </div>
+
+            <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">  
+
+            
+
+            	<!-- Static navbar --> 
+
+                      <div class="navbar navbar-default padding-0" role="navigation">
+
+                        <div class="container">
+
+                          <div class="navbar-header">
+
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+
+                              <span class="sr-only">Toggle navigation</span>
+
+                              <span class="icon-bar"></span>
+
+                              <span class="icon-bar"></span>
+
+                              <span class="icon-bar"></span>
+
+                            </button>
+
+                            <!--<a class="navbar-brand" href="#"></a>-->
+
+                          </div> 
+
+                          <div class="navbar-collapse collapse">
+
+                         <!--   <ul class="nav navbar-nav"> 
+
+                                <li> <a href="about-us.php"> About	</a> </li>						
+				<li> <a href="iconics.php"> Iconic </a></li>										
+                                <li> <a href="events.php"> Events </a></li>							
+                                <li> <a href="fairs-and-festivals.php"> Festivals	</a></li>							
+                                <li> <a href="experience.php"> Experience </a></li>							
+                                <li> <a href="nearby.php"> Nearby </a></li>				
+                                <li> <a href="tour-packages.php"> Tours </a></li>						
+                                <li> <a href="directory.php"> Directory </a></li>						
+                                <li> <a href="gallery-photo.php"> Gallery </a></li>
+                                  <li> <a href="http://tourism.puducherry.gov.in/" target="_blank"> Official </a> </li> 
+				<li> <a href="trip-planner.php"> Trip Planner </a></li> 
+                                <li class="flight-time"> <a href="learn-tamil.php" target="_blank">Travel & Tips </a></li>  
+                                  <img src="images/flight.png" style="margin-top: -30px; width:150px;"> </a></li>   
+                            </ul>   -->
+<ul class="nav navbar-nav"> 
+<li> <a href="about-us.html"> About</a></li>						
+<li> <a href="http://www.pondytourism.in/iconics.php"> Iconic </a></li>									
+<li> <a href="http://www.pondytourism.in/events.php"> Events </a></li>							
+<li> <a href="http://www.pondytourism.in/fairs-and-festivals.php"> Festivals</a></li>							
+<li> <a href="http://www.pondytourism.in/experience.php"> Experience </a></li>							
+<li> <a href="http://www.pondytourism.in/nearby.php"> Nearby </a></li>				
+<li> <a href="http://www.pondytourism.in/tour-packages.php"> Tours </a></li>						
+<li> <a href="http://www.pondytourism.in/directory.php"> Directory </a></li>						
+<li> <a href="http://www.pondytourism.in/gallery-photo.php"> Gallery </a></li>
+<li> <a href="http://www.pondytourism.in/trip-planner.php"> Trip Planner </a></li> 
+<li class="travel-tip"> <a href="http://www.pondytourism.in/learn-tamil.php" target="_blank">Travel & Tips </a></li>
+<li> <a class="flight-time" href="http://www.pondytourism.in/flight-timings.php" target="_blank"><span>Flight Timing </span></a></li>  
+</ul> 
+
+         
+
+                          </div><!--/.nav-collapse -->
+
+                        </div><!--/.container-fluid -->
+
+                      </div>
+
+                      
+
+            
+
+            </div>
+
+        	<div class="hidden-sm hidden-xs hidden-md col-lg-1" id="logo2"> <center> <a href="http://www.pondytourism.in/index.php"><img src="http://www.pondytourism.in/images/pondicherry-logo3.png"></a> </center> </div>
+
+            
+
+        </div> <div class="visible-lg visible-md"><a href="#" id="menu-handle"><img src="http://www.pondytourism.in/images/menu-on.jpg" class="off" style="display:none;"></a><a href="#" id="showmenu"><img src="http://www.pondytourism.in/images/menu-bl.gif" class="on"></a></div>
+
+        <div class="row"> 
+        	<div class="col-lg-12"> <img src="http://www.pondytourism.in/images/pondicherry-welcomes-you.png" class="img-responsive padding-t-50" id="wel-tex"> </div>
+        </div>
+
+        <div class="row push-this">
+				
+            <div class="col-lg-9 col-md-9 visible-lg visible-md"></div>
+
+            <div class="col-sm-12 col-xs-12 visible-sm visible-xs"> 
+					
+                    <!-- mobile panels -->
+                  <div class="mobile-panels">  
+                    <ul> 
+                    <li class="weather" title="Temples"><div class="temple" style=" width: 58px; height: 38px; float:right; color:#fff;text-align:center; animation: NAME-YOUR-ANIMATION 1s infinite;position:relative; top:0px;"><a href="https://hriwakf.py.gov.in/" target="_blank" style="text-decoration:none; color:#fff; position:relative; top:12px;"><strong>Temples</strong></a></div>
+
+<!--<div class="weatherinfo"><a href="#" class="close" title="close">x</a>
+                            	<div class="nolink"><script src="http://www.weatherforecastmap.com/weather101.php?zona=india_pondicherry"></script></div>
+                            </div> -->
+                           <!-- <img src="images/icon1.png" />-->
+                        </li>
+                		<li><a href="http://www.pondytourism.in/trip-planner.php" title="Trip Planner"><img src="http://www.pondytourism.in/images/icon2.png" /></a></li> 
+                    	<li class="reach-pondy" title="How to reach pondicherry"><a href="http://www.pondytourism.in/how-to-reach.php"><img src="http://www.pondytourism.in/images/icon3.png" /></a></li>
+	                    <li class="social" title="Follow us on social networks">
+                        	<div class="social-icons" >  
+                            <a href="#" class="close">x</a> <br /> Follow us on <br /> 
+                            <a href="https://www.facebook.com/pondytourism.in" target="_blank" title="Facebook"><img src="http://www.pondytourism.in/images/fb-ico.png" width="28" height="28" /></a>  							<a href="https://twitter.com/pondytourism" target="_blank" title="Twitter"><img src="http://www.pondytourism.in/images/tw-ico.png" width="28" height="28" /></a>  
+                            <a href="http://feeds.feedburner.com/pondytourism" target="_blank" title="Subscribe to our feeds"><img src="http://www.pondytourism.in/images/rs-ico.png" width="28" height="28" /></a> </div>
+                            <img src="http://www.pondytourism.in/images/icon4.png" /> 
+                        </li>
+		                <li title="Media"><a href="http://www.pondytourism.in/media.php"><img src="http://www.pondytourism.in/images/icon5.png" /></a></li>
+						<li title="flight timing"><a href="http://www.pondytourism.in/flight-timings.php"><img src="http://www.pondytourism.in/images/flight-timing.jpg" /></a></li>-->
+						<li title="Parking"><a href="#" class="parking"><img src="http://www.pondytourism.in/images/parking.jpg" /></a></li>
+						<li title="Visit Raj Nivas"><a href="http://rajnivas.py.gov.in/" target="_blank"><img src="http://www.pondytourism.in/images/rajnivas.jpg" /></a></li>
+						<!--<li title="New Year Tender"><a href="NewYearTender.pdf" target="_blank"><img src="images/new.gif" /></a></li>-->
+						
+                    </ul>
+<ul> 
+                    	<li style="background-color:#0b0301; padding:6%; border-radius:6%;"> 
+                            <img src="http://www.pondytourism.in/images/art-craft-village-logo1.png" style="width:100%; height:auto;" />
+                        </li>
+</ul>
+                  </div>
+                    <!-- mobile panels -->
+                               	 
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+           
+            	<div class="sidenavigation"> 
+
+                	<ul> 
+                    	<li class="weather" title="Temples"><div class="temple" style=" width: 60px; height: 43px; float:right; color:#fff;text-align:center; animation: NAME-YOUR-ANIMATION 1s infinite;position:relative; top:-42px;"><a href="https://hriwakf.py.gov.in/" target="_blank" style="text-decoration:none; color:#fff; position:relative; top:12px;"><strong>Temples</strong></a></div>
+                            
+
+
+<!--<div class="weatherinfo"><a href="#" class="close" title="close">x</a>
+                            	<div class="nolink"><script src="http://www.weatherforecastmap.com/weather101.php?zona=india_pondicherry"></script></div>
+                            </div> -->
+                           <!-- <img src="images/icon1.png" />-->
+                        </li>
+
+                		<li style="position:relative;left:60px;"><a href="http://www.pondytourism.in/trip-planner.php" title="Trip Planner"><img src="http://www.pondytourism.in/images/icon2.png" /></a></li> 
+                    	<li class="reach-pondy" title="How to reach pondicherry"><a href="http://www.pondytourism.in/how-to-reach.php"><img src="http://www.pondytourism.in/images/icon3.png" /></a></li>
+	                    <li class="social" title="Follow us on social networks">
+                        	<div class="social-icons" >  
+                            <a href="#" class="close">x</a> <br /> Follow us on <br /> 
+                            <a href="https://www.facebook.com/pondytourism.in" target="_blank" title="Facebook"><img src="http://www.pondytourism.in/images/fb-ico.png" width="28" height="28" /></a>  							<a href="https://twitter.com/pondytourism" target="_blank" title="Twitter"><img src="http://www.pondytourism.in/images/tw-ico.png" width="28" height="28" /></a>  
+                            <a href="http://feeds.feedburner.com/pondytourism" target="_blank" title="Subscribe to our feeds"><img src="http://www.pondytourism.in/images/rs-ico.png" width="28" height="28" /></a> </div>
+                            <img src="http://www.pondytourism.in/images/icon4.png" /> 
+                        </li>
+		                <li title="Media"><a href="http://www.pondytourism.in/media.php"><img src="http://www.pondytourism.in/images/icon5.png" /></a></li>
+						<!--<li title="flight timing"><a href="flight-timings.php"><img src="images/flight-timing.jpg" /></a></li>-->
+						<li title="Parking"><a href="#" class="parking"><img src="http://www.pondytourism.in/images/parking.jpg" /></a></li>
+						<li title="Visit Raj Nivas"><a href="http://rajnivas.py.gov.in/" target="_blank"><img src="http://www.pondytourism.in/images/rajnivas.jpg" /></a></li>
+						<!--<li title="New Year Tender"><a href="NewYearTender.pdf" target="_blank"><img src="images/new.gif" /></a></li>-->
+						<!--<li title="Yoga Festival" id="yoga" style="width:58px; height:38px; float:right;"><a href="http://yogafestival.py.gov.in" target="_blank" ><img src="images/yoga.png" /></a></li>-->
+                    </ul>                    
+
+                </div>            
+
+            
+
+            </div>
+
+            
+
+        </div>
+
+        
+
+        <div class="row footer footer-home">
+        	<div class="container-fluid footer-bg padding-t-50 colorit-grey">
+            <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12 padding-b-10"> 
+            	<a href="http://www.pondytourism.in/interactive-map/index.html" target='_blank'>Interactive Map</a> | <a href="http://www.pondytourism.in/media.php">Media</a> | <a href="contact-us.html">Contact</a> | <a href="http://www.pondytourism.in/travel-tips.php">Tips</a> | <a href="faq.html">FAQ</a> | <a href="feedback.html">Feedback</a> | <a href="http://www.pondytourism.in/sitemap.php">Sitemap</a>
+				
+				<br><br>
+				
+				<!-- Histats.com  START  (standard)
+<script type="text/javascript">document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));</script>
+<script  type="text/javascript" >
+try {Histats.start(1,2895211,4,137,112,33,"00000010");
+Histats.track_hits();} catch(err){};
+</script>
+<noscript><img  src="http://sstatic1.histats.com/0.gif?2895211&101" alt="web statistics" border="0"></noscript>-->
+<!-- Histats.com  END  -->
+			<span style='background-color:#edebec; border:1px solid #231f20; padding:3px 6px;'>Visitors Count:&nbsp;5268570</span>			<!--<a href="http://www.holidayiq.com/states/pondicherry/" target="_blank"><img src="images/holiday-iq-lgo.png"></a>-->	
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 padding-b-10"> <div class="padding-t-5 text-center cpy_rgt1">
+	
+			<iframe src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpondytourism.in&amp;width=80&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:21px;" allowTransparency="true"></iframe> <br>
+			<a href="https://www.facebook.com/pondytourism.in" target="_blank"><img src="http://www.pondytourism.in/images/fb.png"></a> <a href="https://twitter.com/pondytourism" target="_blank"><img src="http://www.pondytourism.in/images/twitter.png"></a>  <a href="https://www.youtube.com/user/pondytourism" target="_blank"><img src="http://www.pondytourism.in/images/youtube.png"></a> <a href="https://plus.google.com/u/0/+PudhucherryTourismDepartmentofficial/about" target="_blank"><img src="http://www.pondytourism.in/images/google.png"></a> <a href="http://www.pinterest.com/pondytourism/" target="_blank"><img src="http://www.pondytourism.in/images/pinterest.png"></a> <br><br>
+					Get the latest news <br> <input type="text" class="subs-txt"> <button class="subs-btn">Subscribe </button></div> </div>
+            <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12 cpy_rgt">
+            	<a href="http://tourism.puducherry.gov.in/" target="_blank">Department of Tourism</a>, Government of Puducherry<br><br>
+                designed & developed by <br><a href="http://www.theredhash.com/" target="_blank"><img src="http://www.pondytourism.in/images/theredhashlogo.png"></a>
+            </div>
+            </div>
+        </div>
+
+                
+
+    </div> 
+
+    
+
+    <script src="http://www.pondytourism.in/js/jquery-1.11.0.min.js"></script>
+
+    <script src="http://www.pondytourism.in/js/bootstrap.min.js"></script>
+
+    <script src="http://www.pondytourism.in/js/custom-functions.js"></script>
+	
+	<script type="text/javascript" src="http://www.pondytourism.in/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.pondytourism.in/css/jquery.fancybox.css?v=2.1.5" media="screen" />
+	
+    <script>
+
+	
+
+	/*$(document).ready(function() {
+	
+	
+		$.fancybox({
+            'width': '60%',
+            'height': '60%',
+            'autoScale': true,
+            'transitionIn': 'fade',
+            'transitionOut': 'fade',
+            'closeClick':true,            
+            'href': 'images/webhomebanner01.jpg',
+			afterShow: function() {
+                $("img.fancybox-image").wrap(jQuery("<a />", {
+                href: "http://pondytourism.in/events.php?district=Puducherry&category=158", // the URL to open after clicking the image
+                target: "_blank"// opens in a new window/tab
+            }))
+            }
+        });
+		
+
+		$('#myCarousel').carousel({
+
+		interval: false
+
+		})
+
+		
+
+		$('#myCarousel').on('slid.bs.carousel', function() {
+
+			//alert("slid");
+
+		});
+
+		$('#myCarousel2').carousel({
+
+		interval: false
+
+		})
+
+		
+
+		$('#myCarousel2').on('slid.bs.carousel', function() {
+
+			//alert("slid");
+
+		});
+
+	});
+
+	//ChangeIt();
+		$(".parking").click(function(){
+			$.fancybox({
+            'width': '60%',
+            'height': '60%',
+            'autoScale': true,
+            'transitionIn': 'fade',
+            'transitionOut': 'fade',            
+            'href': 'images/parking-map.jpg',
+			}); 
+		});
+/*$(document).ready(function() {
+	if($(window).width() >= 980){
+	$(".topnav2, .sidenavigation, .footer-home").delay(10000).toggle(2000,function(){
+		$("#wel-tex").delay(10000).hide();	
+		$(".off").show('slow');
+		$(".on").hide('slow');
+	});
+	}
+});*/
+	</script>
+	
+	<style type="text/css">
+	
+		.fancybox-inner { cursor:pointer !important; };
+		
+	#yoga {
+		width:58px !important;
+		float:right;
+	}
+	
+	.fancybox-skin {
+			background: none;
+			box-shadow: 0px 0px 0px rgba(0, 0, 0, 0) !important;
+		}
+	
+	</style>
+	
+<script>
+
+// tourpondy analystics 
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47863969-1', 'auto');
+  ga('create', 'UA-55159139-1', 'auto', {'name': 'newTracker'}); 
+  
+  ga('send', 'pageview');
+  ga('newTracker.send', 'pageview');
+
+</script>
+
+<script type="text/javascript">
+	/* <![CDATA[ */
+	var google_conversion_id = 962262934;
+	var google_custom_params = window.google_tag_params;
+	var google_remarketing_only = true;
+	/* ]]> */
+	
+	(function(){
+	var hexacode = ['#81007f','#e1ad63'],
+	el = document.getElementById('yoga').style,
+	counter = -1,
+	hexalen = hexacode.length;
+	function auto(){
+		el.backgroundColor = hexacode[counter = ++counter % hexalen];
+	}
+	setInterval(auto, 460);
+})();
+getElementById('#yoga').style.width='58px';
+	</script>
+	<script type="text/javascript" src="../www.googleadservices.com/pagead/f.txt">
+	</script>
+	<noscript>
+	<div style="display:inline;">
+	<img height="1" width="1" style="border-style:none;" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/962262934/?value=0&amp;guid=ON&amp;script=0"/>
+	</div>
+	</noscript>
+  </body>
 </html>
