@@ -24,6 +24,7 @@ urlpatterns = [
     path('eventExplore/',include('apps.events.urls')),
     path('gallery/', include('apps.gallery.urls')),
     path('iconic/', include('apps.iconic.urls')),
+    path('nearby/', include('apps.nearby.urls')),
     path('home/', include('apps.home.urls')),
     path('events/', include('apps.events.urls')),
     path('experience/', include('apps.experience.urls')),

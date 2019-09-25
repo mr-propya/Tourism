@@ -2,42 +2,216 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="{% static 'nehal/iconic.css' %}">
-</head>
-<body>
-<div class="hi">
-    <center>
-        <img style="-webkit-user-select: none;margin: auto;cursor: zoom-in;" src="/static/nehal/images/attractions-header.png" width="694" height="40">
-        <ul class="menu" style="padding:0; margin:0; ">
-            <li style="display:inline-block; padding-right:2px; color:#939598; padding-bottom:10px; "><a style=" text-transform:uppercase; font-family: Cambria;  color:#fff; text-decoration:none; font-size:12px; padding:5px 10px; background:rgba(0,0,0,.90);">ASHRAM AND AUROVILLE</a></li>
-            <li style="display:inline-block; padding-right:2px; color:#939598; padding-bottom:10px; "><a style=" text-transform:uppercase; font-family: Cambria;  color:#fff; text-decoration:none; font-size:12px; padding:5px 10px; background:rgba(0,0,0,.90);">HERITAGE BUILDING AND STREET</a></li>
-            <li style="display:inline-block; padding-right:2px; color:#939598; padding-bottom:10px; "><a style=" text-transform:uppercase; font-family: Cambria;  color:#fff; text-decoration:none; font-size:12px; padding:5px 10px; background:rgba(0,0,0,.90);">BEACHES</a></li>
-            <li style="display:inline-block; padding-right:2px; color:#939598; padding-bottom:10px; "><a style=" text-transform:uppercase; font-family: Cambria;  color:#fff; text-decoration:none; font-size:12px; padding:5px 10px; background:rgba(0,0,0,.90);">BACKWATERS,LAKES AND GARDENS</a></li>
-            <li style="display:inline-block; padding-right:2px; color:#939598; padding-bottom:10px; "><a style=" text-transform:uppercase; font-family: Cambria;  color:#fff; text-decoration:none; font-size:12px; padding:5px 10px; background:rgba(0,0,0,.90);">MEMORIALS AND MONUMENTS</a></li>
-            <li style="display:inline-block; padding-right:2px; color:#939598; padding-bottom:10px; "><a style=" text-transform:uppercase; font-family: Cambria;  color:#fff; text-decoration:none; font-size:12px; padding:5px 10px; background:rgba(0,0,0,.90);">MUSEUMS</a></li>
-            <li style="display:inline-block; padding-right:2px; color:#939598; padding-bottom:10px; "><a style=" text-transform:uppercase; font-family: Cambria;  color:#fff; text-decoration:none; font-size:12px; padding:5px 10px; background:rgba(0,0,0,.90);">TEMPLES</a></li>
-            <li style="display:inline-block; padding-right:2px; color:#939598; padding-bottom:10px; "><a style=" text-transform:uppercase; font-family: Cambria;  color:#fff; text-decoration:none; font-size:12px; padding:5px 10px; background:rgba(0,0,0,.90);">CHURCHES</a></li>
-            <li style="display:inline-block; padding-right:2px; color:#939598; padding-bottom:10px; "><a style=" text-transform:uppercase; font-family: Cambria;  color:#fff; text-decoration:none; font-size:12px; padding:5px 10px; background:rgba(0,0,0,.90);">MOSQUES</a></li>
-            <li style="display:inline-block; padding-right:2px; color:#939598; padding-bottom:10px; "><a style=" text-transform:uppercase; font-family: Cambria;  color:#fff; text-decoration:none; font-size:12px; padding:5px 10px; background:rgba(0,0,0,.90);">ARCHEOLOGICAL SITES</a></li>
-        </ul>
-    </center>
-</div>
-<div class="row padding-t-10 iconics-para">
-<center>
-    {% for iconic in iconic_places %}
-        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
-            <a href=" "><div class="iconics" style="background:url({{ iconic.directUrl }})no-repeat; background-position:50% 50%; background-size: cover;"></div></a>
-            <h4>{{ iconic.name}}</h4>
-            <div class="parag">{{iconic.description}}</div>
-            <a href="{% url 'about' %}">Read more</a>
+       <title>Pondicherry Tourism - Tourism places to visit in Puducherry</title>
+<meta name="Description" content="Tourism Places in Pondicherry - Place to visit & things to do in Beaches, Backwater, heritage buildings, Temples, Churches & Mosques in puducherry." />
+
+	<meta name="Keywords" content="Beaches, Backwater, Lake, Sea, Ocean, Bay of Bengal, heritage buildings, Temples, Churches, Mosques, Ashram, Auroville, Archeological site, Lycee Francais" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://www.pondytourism.in/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="http://www.pondytourism.in/css/custom-style.css" rel="stylesheet" media="screen">
+    <link rel="shortcut icon" href="http://www.pondytourism.in/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="http://www.pondytourism.in/favicon.ico" type="image/x-icon">
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+   <style>
+
+a.flight-time:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(http://www.pondytourism.in/images/flight.png) no-repeat;
+    width: 100px;
+    height: 40px;
+    background-size: 80%;
+}
+a.flight-time span{
+    visibility: hidden;
+}
+
+</style>
+  </head>
+    <style type="text/css">
+body.explore-experience-places
+{
+
+	background: url('http://www.pondytourism.in/upload/files/2549fe6944dbbd852875df34ec3f8982.jpeg') no-repeat center center fixed; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;	background-size: cover;
+
+}
+</style>
+  <body class="explore-experience-places" onLoad="initialize()">
+    <div class="container-fluid">
+        <div class="visible-xs visible-md visible-sm padding-t-10" id="logo3"> <center> <a href="http://www.pondytourism.in/index.php"><img src="http://www.pondytourism.in/images/pondicherry-logo.png"></a> </center> </div>
+    	<div class="row padding-t-10 topnav">
+        	<div class="hidden-sm hidden-xs hidden-md col-lg-1" id="logo2"> <center><a href="http://tourism.puducherry.gov.in/"><img src="http://www.pondytourism.in/images/emblem2.png"></a></center>  </div>
+            <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+
+                      <div class="navbar navbar-default padding-0" role="navigation">
+                        <div class="container">
+                          <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                            </button>
+
+                          </div>
+                          <div class="navbar-collapse collapse">
+
+
+<ul class="nav navbar-nav">
+<li> <a href="http://www.pondytourism.in/about-us.php"> About</a></li>
+<li> <a href="iconics.html" class="active"> Iconic </a></li>
+<li> <a href="{% url 'events' %}"> Events </a></li>
+<li> <a href="{% url 'festival' %}"> Festivals</a></li>
+<li> <a href="{% url 'experience' %}"> Experience </a></li>
+<li> <a href="{% url 'nearby' %}"> Nearby </a></li>
+<li> <a href="http://www.pondytourism.in/tour-packages.php"> Tours </a></li>
+<li> <a href="http://www.pondytourism.in/directory.php"> Directory </a></li>
+<li> <a href="http://www.pondytourism.in/gallery-photo.php"> Gallery </a></li>
+<li> <a href="http://www.pondytourism.in/trip-planner.php"> Trip Planner </a></li>
+<li class="travel-tip"> <a href="http://www.pondytourism.in/learn-tamil.php" target="_blank">Travel & Tips </a></li>
+<li> <a class="flight-time" href="http://www.pondytourism.in/flight-timings.php" target="_blank"><span>Flight Timing </span></a></li>
+</ul>
+                          </div>
+                        </div>
+                      </div>
+
+
+            </div>
+
+        	<div class="hidden-sm hidden-xs hidden-md col-lg-1" id="logo2"> <center> <a href="http://www.pondytourism.in/index.php" target="_blank"><img src="http://www.pondytourism.in/images/pondicherry-logo3.png"></a> </center> </div>
+
+        </div> <div class="visible-lg visible-md"><a href="#" id="menu-handle2"><img src="http://www.pondytourism.in/images/menu.jpg" class="off" style="display:none;"></a><a href="#" id="showmenu2"><img src="http://www.pondytourism.in/images/menu-on.jpg" class="on"></a></div>
+       	<ul class='submenu_cat'><li class='active_mnu'> <a href='http://www.pondytourism.in/iconics.php?district=Puducherry'>Puducherry</a> </li><li> <a href='http://www.pondytourism.in/iconics.php?district=Karaikal'>Karaikal</a> </li><li> <a href='http://www.pondytourism.in/iconics.php?district=Mahe'>Mahe</a> </li><li> <a href='http://www.pondytourism.in/iconics.php?district=Yanam'>Yanam</a> </li></ul>        <div class="row">
+        	<div class="col-lg-12"> <center><img src="http://www.pondytourism.in/images/attractions-header.png" class="img-responsive"> </center> </div>
+
+        	<div class="col-lg-12 padding-t-10">
+            	<center>
+				<ul class='submenu4'><li> <a  class='active' href='http://www.pondytourism.in/iconics.php?district=Puducherry&amp;category=191'>ASHRAM AND AUROVILLE</a> </li><li> <a href='http://www.pondytourism.in/iconics.php?district=Puducherry&amp;category=195'>HERITAGE BUILDINGS AND STREETS</a> </li><li> <a href='http://www.pondytourism.in/iconics.php?district=Puducherry&amp;category=193'>BEACHES</a> </li><li> <a href='http://www.pondytourism.in/iconics.php?district=Puducherry&amp;category=192'>BACKWATERS, LAKES AND GARDENS</a> </li><li> <a href='http://www.pondytourism.in/iconics.php?district=Puducherry&amp;category=196'>MEMORIALS AND MONUMENTS</a> </li><li> <a href='http://www.pondytourism.in/iconics.php?district=Puducherry&amp;category=197'>MUSEUMS</a> </li><li> <a href='http://www.pondytourism.in/iconics.php?district=Puducherry&amp;category=198'>TEMPLES</a> </li><li> <a href='http://www.pondytourism.in/iconics.php?district=Puducherry&amp;category=194'>CHURCHES</a> </li><li> <a href='http://www.pondytourism.in/iconics.php?district=Puducherry&amp;category=199'>MOSQUES</a> </li><li> <a href='http://www.pondytourism.in/iconics.php?district=Puducherry&amp;category=190'>ARCHEOLOGICAL SITES</a> </li></ul>
+                   </center>
+            </div>
         </div>
-    {% endfor %}
-</center>
-</div>
-</body>
+
+        <div class="row padding-t-10 iconics-para">
+        	<div class='col-lg-2 col-md-4 col-sm-6 col-xs-12'>
+									<a href='http://www.pondytourism.in/iconics-innerpage.php?id=60&amp;district=Puducherry&amp;category=191'><div class='iconics' style='background:url(http://www.pondytourism.in/upload/files/1e1dce38ca1be1e08c5679482b716e35.jpeg)no-repeat; background-position:50% 50%; background-size: cover;'></div></a>
+
+									<h4>ASHRAM DINING ROOM</h4>
+									<div class='parag'>Ashram Dining Room has prepared the food for Ashramites and their...</div>
+
+									 <a href='http://www.pondytourism.in/iconics-innerpage.php?id=60&amp;district=Puducherry&amp;category=191'>Read more</a>
+									</div><div class='col-lg-2 col-md-4 col-sm-6 col-xs-12'>
+									<a href='http://www.pondytourism.in/iconics-innerpage.php?id=61&amp;district=Puducherry&amp;category=191'><div class='iconics' style='background:url(http://www.pondytourism.in/upload/files/bfb8889a237fa5a75d62ae77f20ee4b5.jpeg)no-repeat; background-position:50% 50%; background-size: cover;'></div></a>
+
+									<h4>ASHRAM SCHOOL BUILDING</h4>
+									<div class='parag'>Sri Aurobindo International Centre of Education, an integral part of...</div>
+
+									 <a href='http://www.pondytourism.in/iconics-innerpage.php?id=61&amp;district=Puducherry&amp;category=191'>Read more</a>
+									</div><div class='col-lg-2 col-md-4 col-sm-6 col-xs-12'>
+									<a href='http://www.pondytourism.in/iconics-innerpage.php?id=21&amp;district=Puducherry&amp;category=191'><div class='iconics' style='background:url(http://www.pondytourism.in/upload/files/1a8979e9bb2643dcded3606f9109e5ba.jpeg)no-repeat; background-position:50% 50%; background-size: cover;'></div></a>
+
+									<h4>AUROVILLE </h4>
+									<div class='parag'>Auroville - or the 'City of Dawn' - was conceived as a place of...</div>
+
+									 <a href='http://www.pondytourism.in/iconics-innerpage.php?id=21&amp;district=Puducherry&amp;category=191'>Read more</a>
+									</div><div class='col-lg-2 col-md-4 col-sm-6 col-xs-12'>
+									<a href='http://www.pondytourism.in/iconics-innerpage.php?id=6&amp;district=Puducherry&amp;category=191'><div class='iconics' style='background:url(http://www.pondytourism.in/upload/files/225da50f9ffd4e6702af9bf0bb909c61.jpeg)no-repeat; background-position:50% 50%; background-size: cover;'></div></a>
+
+									<h4>SRI AUROBINDO ASHRAM</h4>
+									<div class='parag'>
+
+The Sri Aurobindo Ashram located on Rue de la Marine, is one of the...</div>
+
+									 <a href='http://www.pondytourism.in/iconics-innerpage.php?id=6&amp;district=Puducherry&amp;category=191'>Read more</a>
+									</div>
+				</div>
+				<div style="position: relative; width: 80%; background-color:none; margin: 0 auto; text-align: center; margin-top: 20px;"><ul class="pagination"><li class="disabled"><a>&laquo;</a></li><li class="active"><span>1</span></li><li class="disabled"><a>&raquo;</a></li></ul></div>
+
+
+
+
+        <div class="row footer">
+        	<div class="container-fluid footer-bg padding-t-50 colorit-grey">
+            <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12 padding-b-10">
+            	<a href="http://www.pondytourism.in/interactive-map/index.html" target='_blank'>Interactive Map</a> | <a href="http://www.pondytourism.in/media.php">Media</a> | <a href="http://www.pondytourism.in/contact-us.php">Contact</a> | <a href="http://www.pondytourism.in/travel-tips.php">Tips</a> | <a href="http://www.pondytourism.in/faq.php">FAQ</a> | <a href="http://www.pondytourism.in/feedback.php">Feedback</a> | <a href="http://www.pondytourism.in/sitemap.php">Sitemap</a>
+
+				<br><br>
+
+            <span style='background-color:#edebec; border:1px solid #231f20; padding:3px 6px;'>Visitors Count:&nbsp;5269312</span>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 padding-b-10"> <div class="padding-t-5 text-center cpy_rgt1">
+
+			<iframe src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpondytourism.in&amp;width=80&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:21px;" allowTransparency="true"></iframe> <br>
+			<a href="https://www.facebook.com/pondytourism.in" target="_blank"><img src="http://www.pondytourism.in/images/fb.png"></a> <a href="https://twitter.com/pondytourism" target="_blank"><img src="http://www.pondytourism.in/images/twitter.png"></a>  <a href="https://www.youtube.com/user/pondytourism" target="_blank"><img src="http://www.pondytourism.in/images/youtube.png"></a> <a href="https://plus.google.com/u/0/+PudhucherryTourismDepartmentofficial/about" target="_blank"><img src="http://www.pondytourism.in/images/google.png"></a> <a href="http://www.pinterest.com/pondytourism/" target="_blank"><img src="http://www.pondytourism.in/images/pinterest.png"></a> <br><br>
+					Get the latest news <br> <input type="text" class="subs-txt"> <button class="subs-btn">Subscribe </button></div> </div>
+            <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12 cpy_rgt">
+            	<a href="http://tourism.puducherry.gov.in/" target="_blank">Department of Tourism</a>, Government of Puducherry<br><br>
+                designed & developed by <br><a href="http://www.theredhash.com/" target="_blank"><img src="http://www.pondytourism.in/images/theredhashlogo.png"></a>
+            </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="http://www.pondytourism.in/js/jquery-1.11.0.min.js"></script>
+    <script src="http://www.pondytourism.in/js/bootstrap.min.js"></script>
+    <script src="http://www.pondytourism.in/js/custom-functions.js"></script>
+
+    <script src="../code.jquery.com/jquery-1.10.0.min.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="../cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="http://www.pondytourism.in/js/jquery.vgrid.min.js" type="text/javascript" charset="UTF-8"></script>
+
+	<script type="text/javascript">
+    //<![CDATA[
+    $(function(){
+        $("#grid-content2").vgrid({
+            easing: "easeOutQuint",
+            time: 400,
+            delay: 20,
+            wait: 500
+        });
+    });
+    //]]>
+    </script>
+
+  <script>
+
+// tourpondy analystics
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47863969-1', 'auto');
+  ga('create', 'UA-55159139-1', 'auto', {'name': 'newTracker'});
+
+  ga('send', 'pageview');
+  ga('newTracker.send', 'pageview');
+
+</script>
+
+  <script type="text/javascript">
+	/* <![CDATA[ */
+	var google_conversion_id = 962262934;
+	var google_custom_params = window.google_tag_params;
+	var google_remarketing_only = true;
+	/* ]]> */
+	</script>
+	<script type="text/javascript" src="../www.googleadservices.com/pagead/f.txt">
+	</script>
+	<noscript>
+	<div style="display:inline;">
+	<img height="1" width="1" style="border-style:none;" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/962262934/?value=0&amp;guid=ON&amp;script=0"/>
+	</div>
+	</noscript>
+  </body>
+
+
 </html>

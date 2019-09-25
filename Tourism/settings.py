@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'apps.experience',
     'apps.eventExplore',
     'apps.festival',
+    'apps.nearby',
 ]
 
 MIDDLEWARE = [

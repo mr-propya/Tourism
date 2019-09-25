@@ -2,20 +2,47 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="{% static 'nehal/experience.css' %}">
-</head>
-<body>
-<div class="visible-xs visible-md visible-sm padding-t-10" id="logo3"> <center> <a href="index.php"><img src="/static/nehal/images/pondicherry-logo.png"></a> </center> </div>
-<div class="row padding-t-10 topnav">
-        	<div class="hidden-sm hidden-xs hidden-md col-lg-1" id="logo2"> <center><a href="http://tourism.puducherry.gov.in/"><img src="images/emblem2.png"></a></center>  </div>
-            <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
 
-            	<!-- Static navbar -->
+    <title>Pondy Tourism - Best of things to do & sightseeing in Pondicherry</title>
+	<meta name="Description" content="Best of things to do in Pondicherry - Experience the delight of Pondicherry culture, shopping, beaches, adventure, nature & wildlife in Puducherry." />
+
+	<meta name="Keywords" content="Culture, Arts, Crafts, Experience, Pondy, Gourmet, Wellness, Health, Faith, Shopping, Adventure Sports, Petanque, Filming, Destination, Education, M.I.C.E., Nature, Wildlife, Rural, Tourism" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://www.pondytourism.in/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="http://www.pondytourism.in/css/custom-style.css" rel="stylesheet" media="screen">
+    <link rel="shortcut icon" href="http://www.pondytourism.in/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="http://www.pondytourism.in/favicon.ico" type="image/x-icon">
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+   <style>
+
+a.flight-time:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(http://www.pondytourism.in/images/flight.png) no-repeat;
+    width: 100px;
+    height: 40px;
+    background-size: 80%;
+}
+a.flight-time span{
+    visibility: hidden;
+}
+
+</style>
+  </head>
+
+  <body class="experience">
+    <div class="container-fluid">
+        <div class="visible-xs visible-md visible-sm padding-t-10" id="logo3"> <center> <a href="http://www.pondytourism.in/index.php"><img src="http://www.pondytourism.in/images/pondicherry-logo.png"></a> </center> </div>
+    	<div class="row padding-t-10 topnav">
+        	<div class="hidden-sm hidden-xs hidden-md col-lg-1" id="logo2"> <center><a href="http://tourism.puducherry.gov.in/"><img src="http://www.pondytourism.in/images/emblem2.png"></a></center>  </div>
+            <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
                       <div class="navbar navbar-default padding-0" role="navigation">
                         <div class="container">
                           <div class="navbar-header">
@@ -25,109 +52,178 @@
                               <span class="icon-bar"></span>
                               <span class="icon-bar"></span>
                             </button>
-                            <!--<a class="navbar-brand" href="#"></a>-->
                           </div>
                           <div class="navbar-collapse collapse">
-                            <!-- <ul class="nav navbar-nav">
-                                <li> <a href="about-us.php"> About	</a> </li>
-                                <li> <a href="iconics.php"> Iconic </a></li>
-                                <li> <a href="events.php"> Events </a></li>
-                                <li> <a href="fairs-and-festivals.php"> Festivals	</a></li>
-                                <li> <a href="experience.php" class="active"> Experience </a></li>
-                                <li> <a href="nearby.php"> Nearby </a></li>
-                                <li> <a href="tour-packages.php"> Tours </a></li>
-                                <li> <a href="directory.php"> Directory </a></li>
-                                <li> <a href="gallery-photo.php"> Gallery </a></li>
-                                <li> <a href="http://tourism.pondicherry.gov.in" target="_blank"> Official </a> </li>
-								<li> <a href="trip-planner.php"> Trip Planner </a></li>
-								<li> <a href="http://www.pondytourism.in/flight-timings.php" target="_blank"> <img src="images/flight.png" style="margin-top: -30px; width:150px;"> </a></li>
-                            </ul>   -->
+
 <ul class="nav navbar-nav">
-<li> <a href="about-us.php"> About</a></li>
-<li> <a href="iconics.php"> Iconic </a></li>
-<li> <a href="events.php"> Events </a></li>
-<li> <a href="fairs-and-festivals.php"> Festivals</a></li>
-<li> <a href="experience.php" class="active"> Experience </a></li>
-<li> <a href="nearby.php"> Nearby </a></li>
-<li> <a href="tour-packages.php"> Tours </a></li>
-<li> <a href="directory.php"> Directory </a></li>
-<li> <a href="gallery-photo.php"> Gallery </a></li>
-<li> <a href="trip-planner.php"> Trip Planner </a></li>
-<li class="travel-tip"> <a href="learn-tamil.php" target="_blank">Travel &amp; Tips </a></li>
-<li> <a class="flight-time" href="flight-timings.php" target="_blank"><span>Flight Timing </span></a></li>
+<li> <a href="http://www.pondytourism.in/about-us.php"> About</a></li>
+<li> <a href="{% url 'iconic' %}"> Iconic </a></li>
+<li> <a href="{% url 'events' %}"> Events </a></li>
+<li> <a href="{% url 'festival' %}"> Festivals</a></li>
+<li> <a href="experience.html" class="active"> Experience </a></li>
+<li> <a href="{% url 'nearby' %}"> Nearby </a></li>
+<li> <a href="http://www.pondytourism.in/tour-packages.php"> Tours </a></li>
+<li> <a href="http://www.pondytourism.in/directory.php"> Directory </a></li>
+<li> <a href="http://www.pondytourism.in/gallery-photo.php"> Gallery </a></li>
+<li> <a href="http://www.pondytourism.in/trip-planner.php"> Trip Planner </a></li>
+<li class="travel-tip"> <a href="http://www.pondytourism.in/learn-tamil.php" target="_blank">Travel & Tips </a></li>
+<li> <a class="flight-time" href="http://www.pondytourism.in/flight-timings.php" target="_blank"><span>Flight Timing </span></a></li>
 </ul>
-                          </div><!--/.nav-collapse -->
-                        </div><!--/.container-fluid -->
+                          </div>
+                        </div>
                       </div>
 
 
             </div>
-        	<div class="hidden-sm hidden-xs hidden-md col-lg-1" id="logo2"> <center> <a href="index.php" target="_blank"><img src="images/pondicherry-logo3.png"></a> </center> </div>
+        	<div class="hidden-sm hidden-xs hidden-md col-lg-1" id="logo2"> <center> <a href="http://www.pondytourism.in/index.php" target="_blank"><img src="http://www.pondytourism.in/images/pondicherry-logo3.png"></a> </center> </div>
 
+        </div> <div class="visible-lg visible-md"><a href="#" id="menu-handle2"><img src="http://www.pondytourism.in/images/menu.jpg" class="off" style="display:none;"></a><a href="#" id="showmenu2"><img src="http://www.pondytourism.in/images/menu-on.jpg" class="on"></a></div>
+
+        <div class="row padding-t-100">
+	        	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> <center><img src="http://www.pondytourism.in/images/experience-title.png" class="img-responsive"></center> <br><br> </div>
         </div>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    <center>
-        <img src="/static/nehal/images/experience-title.png">
-        <br><br>
-    </center>
-</div>
-<div class="colorbg-white">
-    <div class="col-lg-2 col-md-2 visible-lg visible-md">
-    </div>
-    <div  class="col-lg-8 col-md-8 col-sm-12 col-xs-12" style="background-color: white">
-        <center> <br>
+
+        <div class="row colorbg-white">
+	        <div class="col-lg-2 col-md-2 visible-lg visible-md"></div>
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                <center> <br>
                 	<p> Away from the hustle and bustle of big cities, Puducherry is a quiet little town on the southern coast of India. The unmistakable French connection, the tree lined boulevards, the quaint colonial heritage buildings, the spiritual sceneries, the endless stretches of unspoilt virgin beaches and backwaters and a surprising choice of restaurants serving a melange of cuisines provide a heady mix of experience that draws travellers from near and far to the city. It is the perfect place to come if you want to take the pace of life down a few notches. </p> <br>
 				</center>
-    </div>
-    <div class="col-lg-2 col-md-2 visible-lg visible-md">
+			</div>
+            <div class="col-lg-2 col-md-2 visible-lg visible-md"></div>
+        </div>
 
-    </div>
-</div>
-<div class="row padding-t-50">
-    <div id="grid-exp-content" class="gridalicious">
-        <div class="galcolumn" id="item0GPtL7" style="width: 32.9135%; padding-left: 10px; padding-bottom: 10px; float: left; box-sizing: border-box;">
-            <div class="item" >
-                    <a href=" "><img src="/static/nehal/images/art.jpg" class="img-fullwidth" style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;"></a>
+        <div class="row padding-t-50">
+
+            <div id="grid-exp-content">
+                <div class='item'>
+                    <a href='http://www.pondytourism.in/explore-and-experience-innerpage.php?id=27'><img src='http://www.pondytourism.in/upload/files/artgallery-1.jpg' class='img-fullwidth'></a>
                     <h3>Puducherry Art and Craft Village</h3>
                     <p>ADDRESS:
 Murungapakkam, (Near Govt. Catering College)Puducherry 605004.
 For Details please call at +91 413 2358576
-EXPLORE! EXPERIENCE! ENGAGE!Every tourist to Pondy should visit Puducherry Art &amp; Craft Village a premier platform built to...<a href="explore-and-experience-innerpage.php?id=27">Read more</a></p>
-                </div>
-            <div class="item" >
-                    <a href=" "><img src="/static/nehal/images/health.jpeg" class="img-fullwidth" style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;"></a>
-                    <h3>Health And Wellness</h3>
+EXPLORE! EXPERIENCE! ENGAGE!Every tourist to Pondy should visit Puducherry Art &amp; Craft Village a premier platform built to...<br><br><a href='http://www.pondytourism.in/explore-and-experience-innerpage.php?id=27'>Read more</a></p>
+                </div><div class='item'>
+                    <a href='http://www.pondytourism.in/explore-and-experience-innerpage.php?id=26'><img src='http://www.pondytourism.in/upload/files/174e8e7be7132a8d37738616a86620ae.jpeg' class='img-fullwidth'></a>
+                    <h3>Pondicherry Aqua Tourism</h3>
+                    <p>In India, the concept of boat house tourism is well tapped by two states of Kerala and Jammu &amp; Kashmir. While Kerala has scenic backwaters, Kashmir has picturesque lakes to cater to such kind of tourism product. Coastal Pondicherry will now be...<br><br><a href='http://www.pondytourism.in/explore-and-experience-innerpage.php?id=26'>Read more</a></p>
+                </div><div class='item'>
+                    <a href='http://www.pondytourism.in/explore-and-experience-innerpage.php?id=7'><img src='http://www.pondytourism.in/upload/files/4d09ccc890e622480dafe236fa86bcf2.jpeg' class='img-fullwidth'></a>
+                    <h3>Shopping</h3>
+                    <p>Visitors can choose their mementoes from Pondicherry's many specialities - ceramic tableware and ornaments, terracotta toys and trinkets, incense and scented candles, handmade paper lampshades and stationery, Buddha and Ganesh figures carved out of...<br><br><a href='http://www.pondytourism.in/explore-and-experience-innerpage.php?id=7'>Read more</a></p>
+                </div><div class='item'>
+                    <a href='http://www.pondytourism.in/explore-and-experience-innerpage.php?id=9'><img src='http://www.pondytourism.in/upload/files/37fe60ec8601569cf8b9b3e67f5d573a.jpeg' class='img-fullwidth'></a>
+                    <h3>Health and Wellness</h3>
                     <p>
 
-Pondicherry boasts a good number of general as well as speciality hospitals, testing facilities and labs, as well as many pharmacies across the city. Treatments cost a fraction of what they would in many parts of the Western world. A...<a href="explore-and-experience-innerpage.php?id=27">Read more</a></p>
-                </div>
-        </div>
-         <div class="galcolumn" id="item0GPtL7" style="width: 32.9135%; padding-left: 10px; padding-bottom: 10px; float: left; box-sizing: border-box;">
-            <div class="item" >
-                    <a href=" "><img src="/static/nehal/images/aqua.jpeg" class="img-fullwidth" style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;"></a>
-                    <h3>Pondicherry Aqua Tourism</h3>
-                    <p>In India, the concept of boat house tourism is well tapped by two states of Kerala and Jammu &amp; Kashmir. While Kerala has scenic backwaters, Kashmir has picturesque lakes to cater to such kind of tourism product. Coastal Pondicherry will now be...<a href="explore-and-experience-innerpage.php?id=27">Read more</a></p>
-                </div>
-            <div class="item" >
-                    <a href=" "><img src="/static/nehal/images/gourmet.jpeg" class="img-fullwidth" style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;"></a>
+Pondicherry boasts a good number of general as well as speciality hospitals, testing facilities and labs, as well as many pharmacies across the city. Treatments cost a fraction of what they would in many parts of the Western world. A...<br><br><a href='http://www.pondytourism.in/explore-and-experience-innerpage.php?id=9'>Read more</a></p>
+                </div><div class='item'>
+                    <a href='http://www.pondytourism.in/explore-and-experience-innerpage.php?id=13'><img src='http://www.pondytourism.in/upload/files/491a1eb423242563561de9889544f91b.jpeg' class='img-fullwidth'></a>
                     <h3>Gourmet</h3>
-                    <p>Few things demonstrate Pondicherry's rich historical heritage and diverse contemporary culture the way its cuisine does. Traditional Tamil cuisine is very popular and many eateries serve snack items like idlis and dosas, full thalis and special...<a href="explore-and-experience-innerpage.php?id=27">Read more</a></p>
-                </div>
-        </div>
-         <div class="galcolumn" id="item0GPtL7" style="width: 32.9135%; padding-left: 10px; padding-bottom: 10px; float: left; box-sizing: border-box;">
-            <div class="item" >
-                    <a href=" "><img src="/static/nehal/images/shopping.jpeg" class="img-fullwidth" style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;"></a>
-                    <h3>Shopping</h3>
-                    <p>Visitors can choose their mementoes from Pondicherry's many specialities - ceramic tableware and ornaments, terracotta toys and trinkets, incense and scented candles, handmade paper lampshades and stationery, Buddha and Ganesh figures carved out of...<a href="explore-and-experience-innerpage.php?id=27">Read more</a></p>
-                </div>
-            <div class="item" >
-                    <a href=" "><img src="/static/nehal/images/faith.jpeg" class="img-fullwidth" style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;"></a>
+                    <p>Few things demonstrate Pondicherry's rich historical heritage and diverse contemporary culture the way its cuisine does. Traditional Tamil cuisine is very popular and many eateries serve snack items like idlis and dosas, full thalis and special...<br><br><a href='http://www.pondytourism.in/explore-and-experience-innerpage.php?id=13'>Read more</a></p>
+                </div><div class='item'>
+                    <a href='http://www.pondytourism.in/explore-and-experience-innerpage.php?id=14'><img src='http://www.pondytourism.in/upload/files/d7b44fbb1d2cd05498ea07d624e5ec60.jpeg' class='img-fullwidth'></a>
                     <h3>Faith Based</h3>
-                    <p>Pondicherry has several sites of religious and spiritual interest. Additionally, visitors interested in religious sites in southern India will find Pondicherry to be an ideal base, as the city has excellent road connectivity as well as ample...<a href="explore-and-experience-innerpage.php?id=27">Read more</a></p>
+                    <p>Pondicherry has several sites of religious and spiritual interest. Additionally, visitors interested in religious sites in southern India will find Pondicherry to be an ideal base, as the city has excellent road connectivity as well as ample...<br><br><a href='http://www.pondytourism.in/explore-and-experience-innerpage.php?id=14'>Read more</a></p>
+                </div><div class='item'>
+                    <a href='http://www.pondytourism.in/explore-and-experience-innerpage.php?id=23'><img src='http://www.pondytourism.in/upload/files/1161035e81adbf88cc27595f91a99bba.jpeg' class='img-fullwidth'></a>
+                    <h3>Puducherry Science Centre And Planetarium</h3>
+                    <p>
+Puducherry
+Science Centre &amp; Planetarium (also known as Puducherry Science Park) is located
+in Lawspet is sprawled over 3 acres with a built-up area of 1500 sq.mtrs. It
+has 6 areas of focus at the moment with ample provision for...<br><br><a href='http://www.pondytourism.in/explore-and-experience-innerpage.php?id=23'>Read more</a></p>
+                </div><div class='item'>
+                    <a href='http://www.pondytourism.in/explore-and-experience-innerpage.php?id=16'><img src='http://www.pondytourism.in/upload/files/cdf02609efb0e054ae2155c99ccb3427.jpeg' class='img-fullwidth'></a>
+                    <h3>M.I.C.E</h3>
+                    <p>Pondicherry is a budding destination for corporate and other meetings and events. Quality facilities are available at competitive prices, and the options are growing. Many hotels offer venues such as conference halls, boardrooms, lawns and banquet...<br><br><a href='http://www.pondytourism.in/explore-and-experience-innerpage.php?id=16'>Read more</a></p>
+                </div><div class='item'>
+                    <a href='http://www.pondytourism.in/explore-and-experience-innerpage.php?id=15'><img src='http://www.pondytourism.in/upload/files/ccb18bc0130a10c7ac502b057d61d35d.jpeg' class='img-fullwidth'></a>
+                    <h3>Sports and Adventure Sports</h3>
+                    <p>Pondicherry offers tourists a host of recreational sports to partake of. The best known of these is the Chunnambar Water Sports Complex. On offer are pedal boats, kayaks, speed boat rides and the newly introduced banana rides. It is an ideal...<br><br><a href='http://www.pondytourism.in/explore-and-experience-innerpage.php?id=15'>Read more</a></p>
+                </div><div class='item'>
+                    <a href='http://www.pondytourism.in/explore-and-experience-innerpage.php?id=17'><img src='http://www.pondytourism.in/upload/files/78a69596c23d6fde9e7601994b6f5ac5.jpeg' class='img-fullwidth'></a>
+                    <h3>Filming</h3>
+                    <p>Heritage Franco-Indian buildings in eye-catching hues, clean cobbled streets lined with flowering trees and a wide seaside boulevard - Pondicherry's sights have become familiar to enthusiasts of Tamil cinema in the last decade or so. A few Bollywood...<br><br><a href='http://www.pondytourism.in/explore-and-experience-innerpage.php?id=17'>Read more</a></p>
+                </div><div class='item'>
+                    <a href='http://www.pondytourism.in/explore-and-experience-innerpage.php?id=18'><img src='http://www.pondytourism.in/upload/files/6eba074fa825090465bfaf97dc1c7102.jpeg' class='img-fullwidth'></a>
+                    <h3>Heritage Walks</h3>
+                    <p>1. ASHRAM WALKStarting Point : Ashram Office (beach)Walk ends at : Ashram Dining RoomDistance covered : 1 Km.Approximate time taken : 30 to 45 minutesAurobindo Ashram has played a significant role in the socio-economic-spiritual fabric of Puducherry...<br><br><a href='http://www.pondytourism.in/explore-and-experience-innerpage.php?id=18'>Read more</a></p>
+                </div><div class='item'>
+                    <a href='http://www.pondytourism.in/explore-and-experience-innerpage.php?id=19'><img src='http://www.pondytourism.in/upload/files/88b51898562cf84279a3655129bd61ac.jpeg' class='img-fullwidth'></a>
+                    <h3>Education</h3>
+                    <p>Pondicherry's excellent formal education opportunities are availed by students from all over the country, who can enjoy the city's multicultural environment, rich heritage and modern facilities while they study.There are nine medical colleges in...<br><br><a href='http://www.pondytourism.in/explore-and-experience-innerpage.php?id=19'>Read more</a></p>
                 </div>
+            </div>
+
         </div>
+        <div style="position: relative; width: 80%; background-color:none; margin: 0 auto; text-align: center; margin-top: 20px;"><ul class="pagination"><li class="disabled"><a>&laquo;</a></li><li class="active"><span>1</span></li><li><a href="http://www.pondytourism.in/experience.php?page=2">2</a></li><li><a href="http://www.pondytourism.in/experience.php?page=2">&raquo;</a></li></ul></div>        <div class="row footer">
+        	<div class="container-fluid footer-bg padding-t-50 colorit-grey">
+            <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12 padding-b-10">
+            	<a href="http://www.pondytourism.in/interactive-map/index.html" target='_blank'>Interactive Map</a> | <a href="http://www.pondytourism.in/media.php">Media</a> | <a href="http://www.pondytourism.in/contact-us.php">Contact</a> | <a href="http://www.pondytourism.in/travel-tips.php">Tips</a> | <a href="http://www.pondytourism.in/faq.php">FAQ</a> | <a href="http://www.pondytourism.in/feedback.php">Feedback</a> | <a href="http://www.pondytourism.in/sitemap.php">Sitemap</a>
+
+				<br><br>
+
+            <span style='background-color:#edebec; border:1px solid #231f20; padding:3px 6px;'>Visitors Count:&nbsp;5269315</span>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 padding-b-10"> <div class="padding-t-5 text-center cpy_rgt1">
+
+			<iframe src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpondytourism.in&amp;width=80&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:21px;" allowTransparency="true"></iframe> <br>
+			<a href="https://www.facebook.com/pondytourism.in" target="_blank"><img src="http://www.pondytourism.in/images/fb.png"></a> <a href="https://twitter.com/pondytourism" target="_blank"><img src="http://www.pondytourism.in/images/twitter.png"></a>  <a href="https://www.youtube.com/user/pondytourism" target="_blank"><img src="http://www.pondytourism.in/images/youtube.png"></a> <a href="https://plus.google.com/u/0/+PudhucherryTourismDepartmentofficial/about" target="_blank"><img src="http://www.pondytourism.in/images/google.png"></a> <a href="http://www.pinterest.com/pondytourism/" target="_blank"><img src="http://www.pondytourism.in/images/pinterest.png"></a> <br><br>
+					Get the latest news <br> <input type="text" class="subs-txt"> <button class="subs-btn">Subscribe </button></div> </div>
+            <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12 cpy_rgt">
+            	<a href="http://tourism.puducherry.gov.in/" target="_blank">Department of Tourism</a>, Government of Puducherry<br><br>
+                designed & developed by <br><a href="http://www.theredhash.com/" target="_blank"><img src="http://www.pondytourism.in/images/theredhashlogo.png"></a>
+            </div>
+            </div>
+        </div>
+
     </div>
 
-</div>
-</body>
+    <script src="http://www.pondytourism.in/js/jquery-1.11.0.min.js"></script>
+    <script src="http://www.pondytourism.in/js/bootstrap.min.js"></script>
+    <script src="http://www.pondytourism.in/js/custom-functions.js"></script>
+
+    <script src="../code.jquery.com/jquery-1.10.0.min.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="../cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="http://www.pondytourism.in/js/jquery.grid-a-licious.min.js" type="text/javascript" charset="UTF-8"></script>
+
+	<script type="text/javascript">
+
+    $("#grid-exp-content").gridalicious({
+	  gutter: 10,
+	  width: /*320*/240
+	});
+
+    </script>
+	<script>
+
+// tourpondy analystics
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47863969-1', 'auto');
+  ga('create', 'UA-55159139-1', 'auto', {'name': 'newTracker'});
+
+  ga('send', 'pageview');
+  ga('newTracker.send', 'pageview');
+
+</script>
+
+	<script type="text/javascript">
+	var google_conversion_id = 962262934;
+	var google_custom_params = window.google_tag_params;
+	var google_remarketing_only = true;
+	</script>
+	<script type="text/javascript" src="../www.googleadservices.com/pagead/f.txt">
+	</script>
+	<noscript>
+	<div style="display:inline;">
+	<img height="1" width="1" style="border-style:none;" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/962262934/?value=0&amp;guid=ON&amp;script=0"/>
+	</div>
+	</noscript>
+  </body>
 </html>

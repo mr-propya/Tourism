@@ -1,4 +1,3 @@
-from django.contrib import admin
 from django.urls import path
 from . import views
 from django.conf import settings
@@ -6,11 +5,10 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('eventExplore/', views.eventExplore, name="eventExplore"),
     path('iconic/', views.iconic, name="iconic"),
-    path('festival/', views.festival, name="festival"),
+    path('events/', views.events, name="events"),
     path('experience/', views.experience, name="experience"),
-    path('nearby/', views.nearby, name="nearby"),
+    path('festival/', views.festival, name="festival"),
 ]
 
 if settings.DEBUG:

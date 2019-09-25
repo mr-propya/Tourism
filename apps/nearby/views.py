@@ -4,7 +4,7 @@ from django.http import HttpResponse
 
 
 def index(request):
-    template = loader.get_template("nehal/festival.html")
+    template = loader.get_template("nehal/nearby.html")
     """View function for home page of site."""
     return HttpResponse(template.render({}, request))
 
@@ -20,6 +20,6 @@ def experience(request):
     template = loader.get_template('nehal/experience.html')
     return HttpResponse(template.render({},request))
 
-def nearby(request):
-    template = loader.get_template('nehal/nearby.html')
+def festival(request):
+    template = loader.get_template('nehal/festival.html')
     return HttpResponse(template.render({},request))

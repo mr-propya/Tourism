@@ -1,0 +1,456 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+
+    <title>Pondicherry - nearby tourist places to visit, sightseeing & tourism</title>
+	<meta name="Description" content="Tourist Places near Pondicherry - Mahabalipuram, Velankanni, Karaikal, Chidambaram & Vedanthangal, these are nearby place to visit in Pondy." />
+
+	<meta name="Keywords" content="South India, Travel, Tourist Spots, Historical Places, Base, Hub" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://www.pondytourism.in/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="http://www.pondytourism.in/css/custom-style.css" rel="stylesheet" media="screen">
+    <link rel="shortcut icon" href="http://www.pondytourism.in/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="http://www.pondytourism.in/favicon.ico" type="image/x-icon">
+
+
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript">
+
+    function initialize(f,g)
+    {
+        var latlng1 = new google.maps.LatLng(f,g);
+
+        var myOptions =
+        {
+            zoom: 17,
+            center: latlng1,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var map = new google.maps.Map(document.getElementById("nearby-map"), myOptions);
+
+        var marker = new google.maps.Marker({position: latlng1,map: map});
+
+    }
+
+    </script>
+
+    <script type="text/javascript">var switchTo5x=true;</script>
+	<script type="text/javascript" src="../w.sharethis.com/button/buttons.js"></script>
+	<script type="text/javascript">stLight.options({publisher: "1cc70793-c4b9-4e41-96e4-77e2de4dd1dd", onhover: false, doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+<style>
+
+a.flight-time:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(http://www.pondytourism.in/images/flight.png) no-repeat;
+    width: 100px;
+    height: 40px;
+    background-size: 80%;
+}
+a.flight-time span{
+    visibility: hidden;
+}
+
+</style>
+  </head>
+
+  <body class="nearby">
+    <div class="container-fluid">
+        <div class="visible-xs visible-md visible-sm padding-t-10" id="logo3"> <center> <a href="http://www.pondytourism.in/index.php"><img src="http://www.pondytourism.in/images/pondicherry-logo.png"></a> </center> </div>
+    	<div class="row padding-t-10 topnav">
+        	<div class="hidden-sm hidden-xs hidden-md col-lg-1" id="logo2"> <center><a href="http://tourism.puducherry.gov.in/"><img src="http://www.pondytourism.in/images/emblem2.png"></a></center>  </div>
+            <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+
+                      <div class="navbar navbar-default padding-0" role="navigation">
+                        <div class="container-fluid">
+                          <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                            </button>
+
+                          </div>
+                          <div class="navbar-collapse collapse">
+
+
+<ul class="nav navbar-nav">
+<li> <a href="http://www.pondytourism.in/about-us.php"> About</a></li>
+<li> <a href="{% url 'iconic' %}"> Iconic </a></li>
+<li> <a href="{% url 'events' %}"> Events </a></li>
+<li> <a href="{% url 'festival' %}"> Festivals</a></li>
+<li> <a href="{% url 'experience' %}"> Experience </a></li>
+<li> <a href="nearby.html" class="active"> Nearby </a></li>
+<li> <a href="http://www.pondytourism.in/tour-packages.php"> Tours </a></li>
+<li> <a href="http://www.pondytourism.in/directory.php"> Directory </a></li>
+<li> <a href="http://www.pondytourism.in/gallery-photo.php"> Gallery </a></li>
+<li> <a href="http://www.pondytourism.in/trip-planner.php"> Trip Planner </a></li>
+<li class="travel-tip"> <a href="http://www.pondytourism.in/learn-tamil.php" target="_blank">Travel & Tips </a></li>
+<li> <a class="flight-time" href="http://www.pondytourism.in/flight-timings.php" target="_blank"><span>Flight Timing </span></a></li>
+</ul>
+                          </div>
+                        </div>
+                      </div>
+
+
+            </div>
+        	<div class="hidden-sm hidden-xs hidden-md col-lg-1" id="logo2"> <center> <a href="http://www.pondytourism.in/index.php" target="_blank"><img src="http://www.pondytourism.in/images/pondicherry-logo3.png"></a> </center> </div>
+
+        </div> <div class="visible-lg visible-md"><a href="#" id="menu-handle2"><img src="http://www.pondytourism.in/images/menu.jpg" class="off" style="display:none;"></a><a href="#" id="showmenu2"><img src="http://www.pondytourism.in/images/menu-on.jpg" class="on"></a></div>
+
+       <div class="row padding-t-20 tour-push-bottom">
+        	<div class="col-lg-2">
+            	<ul class="nearby-side-menu">
+                							  	<script>var firstdata=4</script>
+						  <li id='4'><a onclick='get_data(4,this);' class='active sizeit'>GANGAIKONDACHOLAPURAM</a></li><li id='3'><a onclick='get_data(3,this);'>CHIDAMBARAM</a></li><li id='5'><a onclick='get_data(5,this);'>GINGEE</a></li><li id='6'><a onclick='get_data(6,this);'>KARAIKAL</a></li><li id='7'><a onclick='get_data(7,this);'>KEEZHOOR</a></li><li id='8'><a onclick='get_data(8,this);'>MANDAGAPATTU</a></li><li id='9'><a onclick='get_data(9,this);'>MARAKANAM</a></li><li id='10'><a onclick='get_data(10,this);'>NAGAPATTINAM</a></li><li id='11'><a onclick='get_data(11,this);'>NAGORE</a></li><li id='12'><a onclick='get_data(12,this);'>PANAMALAI</a></li><li id='13'><a onclick='get_data(13,this);'>PICHAVARAM</a></li><li id='14'><a onclick='get_data(14,this);'>POOMPUHAR</a></li><li id='15'><a onclick='get_data(15,this);'>SINGAVARAM</a></li><li id='16'><a onclick='get_data(16,this);'>THARANGAMBADI</a></li><li id='17'><a onclick='get_data(17,this);'>THALAVANUR</a></li><li id='18'><a onclick='get_data(18,this);'>THIRUVANNAMALAI</a></li><li id='19'><a onclick='get_data(19,this);'>VEDANTHANGAL</a></li><li id='20'><a onclick='get_data(20,this);'>VELANKANNI</a></li><li id='22'><a onclick='get_data(22,this);'>MAHABALIPURAM</a></li>                </ul>
+            </div>
+
+            <div class="col-lg-9">
+            	<div class="row nearby-tab">
+            		<div class="visible-lg col-lg-1 nearone"> <a href="#"> <img src="http://www.pondytourism.in/images/back.png" id="prev"></a>  </div>
+                    <input type="hidden" id="lastid" value="4,3,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,22">
+                     <div id="dynamic_data"></div>
+					 <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 nearby-slider static" style="background:none; display:none;">
+
+						<div class="col-lg-12" style="text-align:center;">
+
+                           <div class="col-lg-5"></div><img src="http://www.pondytourism.in/images/progress.gif" width="30" height="30" style="width:30px !important;"><div class="col-lg-5"></div>
+
+                        </div>
+                        <div class="col-lg-3"> <div id="nearby-map"></div> </div>
+                    </div>
+
+                    <div class="visible-lg col-lg-1 nearthree">  <a href="#"> <img src="http://www.pondytourism.in/images/forward.png" id="next"></a>  </div>
+            	</div>
+					<div id="page_show_nearby" style="position: relative; width: 80%; background-color:none; margin: 0 auto; text-align: center; margin-top: 20px; display:none;"><ul class="pagination"><li class="disabled"><a>&laquo;</a></li><li class="active"><span>1</span></li><li class="disabled"><a>&raquo;</a></li></ul></div>
+            </div>
+
+       </div>
+
+       <div class="row footer">
+        	<div class="container-fluid footer-bg padding-t-50 colorit-grey">
+            <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12 padding-b-10">
+            	<a href="http://www.pondytourism.in/interactive-map/index.html" target='_blank'>Interactive Map</a> | <a href="http://www.pondytourism.in/media.php">Media</a> | <a href="http://www.pondytourism.in/contact-us.php">Contact</a> | <a href="http://www.pondytourism.in/travel-tips.php">Tips</a> | <a href="http://www.pondytourism.in/faq.php">FAQ</a> | <a href="http://www.pondytourism.in/feedback.php">Feedback</a> | <a href="http://www.pondytourism.in/sitemap.php">Sitemap</a>
+
+				<br><br>
+
+            <span style='background-color:#edebec; border:1px solid #231f20; padding:3px 6px;'>Visitors Count:&nbsp;5269456</span>			<!--<a href="http://www.holidayiq.com/states/pondicherry/" target="_blank"><img src="images/holiday-iq-lgo.png"></a>-->
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 padding-b-10"> <div class="padding-t-5 text-center cpy_rgt1">
+
+			<iframe src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpondytourism.in&amp;width=80&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:21px;" allowTransparency="true"></iframe> <br>
+			<a href="https://www.facebook.com/pondytourism.in" target="_blank"><img src="http://www.pondytourism.in/images/fb.png"></a> <a href="https://twitter.com/pondytourism" target="_blank"><img src="http://www.pondytourism.in/images/twitter.png"></a>  <a href="https://www.youtube.com/user/pondytourism" target="_blank"><img src="http://www.pondytourism.in/images/youtube.png"></a> <a href="https://plus.google.com/u/0/+PudhucherryTourismDepartmentofficial/about" target="_blank"><img src="http://www.pondytourism.in/images/google.png"></a> <a href="http://www.pinterest.com/pondytourism/" target="_blank"><img src="http://www.pondytourism.in/images/pinterest.png"></a> <br><br>
+					Get the latest news <br> <input type="text" class="subs-txt"> <button class="subs-btn">Subscribe </button></div> </div>
+            <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12 cpy_rgt">
+            	<a href="http://tourism.puducherry.gov.in/" target="_blank">Department of Tourism</a>, Government of Puducherry<br><br>
+                designed & developed by <br><a href="http://www.theredhash.com/" target="_blank"><img src="http://www.pondytourism.in/images/theredhashlogo.png"></a>
+            </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="http://www.pondytourism.in/js/jquery-1.11.0.min.js"></script>
+    <script src="http://www.pondytourism.in/js/bootstrap.min.js"></script>
+
+ <script>
+
+
+
+
+function store_trip(){
+var passingId = $("#image_data1").val();
+
+var modName = 'nearby';
+
+	//alert("sdfsdf");
+		//localStorage.clear();
+		//console.log(localStorage.hasOwnProperty('addToDateId'));
+
+		if(localStorage.hasOwnProperty('addToDateId'))
+		{
+			var localSaveTempAry = JSON.parse(localStorage.addToDateId);
+			var localSaveModName = JSON.parse(localStorage.addToModeName);
+		}
+		else
+		{
+			var localSaveTempAry = [];
+			var localSaveModName = [];
+		}
+
+		var savePassElem = passingId;
+		var saveModeName = modName;
+
+
+		//console.log(localStorage,localSaveTempAry,savePassElem);
+		if($.inArray(savePassElem,localSaveTempAry)==-1)
+		{
+			localSaveTempAry.push(savePassElem);
+			localSaveModName.push(saveModeName);
+			alert("Successfully added to Trip Planner");
+		}
+		else { alert("Already added");}
+		if($.inArray(saveModeName,localSaveModName)==-1)
+		{
+			localSaveModName.push(saveModeName);
+		}
+
+		localStorage.addToDateId = JSON.stringify(localSaveTempAry);
+		localStorage.addToModeName = JSON.stringify(localSaveModName);
+
+	//console.log(localStorage);
+
+	}
+
+//localStorage.clear();
+
+
+
+
+</script>
+	<script>
+	var glob=0;
+	function get_data(identity,a)
+	{
+	if(glob==0)
+	{
+	glob=1;
+	// alert(identity);
+	$("#dynamic_data").css("display","none");
+	$(".static").css("display","block");
+	 var s=identity;
+	 var http = new XMLHttpRequest();
+		var postdata= "module=nearby&identity="+s+"&data=normal"; //Probably need the escape method for values here, like you did
+//alert(postdata);
+		http.open("http://www.pondytourism.in/POST", "http://www.pondytourism.in/get_nearby_data.php", true);
+
+		http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		http.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+		http.onreadystatechange = function() {
+		if(http.readyState == 4 && http.status == 200)
+			{
+				glob=0;//alert(http.responseText);
+				var latlong=http.responseText.split("*||*")[1];
+				var lat=latlong.split("||")[0];
+				var lng=latlong.split("||")[1];
+				var maindata=http.responseText.split("*||*")[0];
+				$(".nearby-side-menu li a").removeClass('active');
+				$(a).addClass('active');
+				$("#dynamic_data").fadeTo("fast",1, function() {	$(".static").css("display","none");$("#dynamic_data").html(maindata);$("#dynamic_data,#next,#prev").fadeTo("fast",1);
+				$(".nearone,.nearthree").fadeTo("slow",1); initialize(lat,lng); $('#nearby_hfix, #nearby-map').equalizeHeights(); })
+
+
+
+
+			}
+		}
+		http.send(postdata);
+		}
+	}
+	$(document).ready(function()
+	{
+	var s=firstdata;
+	 var http = new XMLHttpRequest();
+		var postdata= "module=nearby&identity="+s+"&data=normal"; //Probably need the escape method for values here, like you did
+//alert(postdata);
+$(".static").css("display","block");
+		http.open("http://www.pondytourism.in/POST", "http://www.pondytourism.in/get_nearby_data.php", true);
+
+		http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		http.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+		http.onreadystatechange = function() {
+		if(http.readyState == 4 && http.status == 200)
+			{
+				//alert(http.responseText);
+				//$(".nearby-side-menu li a").removeClass('active');
+				//$(a).addClass('active');
+				  $("#dynamic_data,#next,#prev").fadeTo("fast",0, function() {$('.sizeit').trigger('click');
+				 })
+
+
+
+
+			}
+		}
+		http.send(postdata);
+
+	});
+	var nincrmnt=0;
+	$("#next").click(function(e){
+
+	var string=$("#lastid").val();
+	var array = string.split(",");
+	//alert(array);
+	 var position=$.inArray($("#cur_id").val(), array);
+
+
+	 var nposition=Number(position+1);
+	 //console.log(nposition+"<"+array.length);
+	 if(nposition<array.length)
+	 { st=1;
+	    if(nincrmnt==0)
+		{
+		nincrmnt=1;
+		console.log(nincrmnt);
+	 	get_data1(array[nposition]);
+		}
+		}
+		else
+		{
+		//$("#next").unbind('click');
+		}
+
+	});
+	var pincrmnt=0;
+	$("#prev").click(function(e){
+	 //$("#prev").stop(true,false);
+	// e.stopImmediatePropagation();
+	// e.preventDefault();
+	var string=$("#lastid").val();
+	var array = string.split(",");
+	//alert(array);
+	 var position=$.inArray($("#cur_id").val(), array);
+	 //alert(position);
+	 if(Number(position)>0)
+	 {
+	 var nposition=Number(position-1);
+	 //alert("nposition:"+nposition);
+	 }
+	 else
+	 {
+	  //alert("position:0");
+	  var nposition=Number(position);
+	 }
+	 console.log(nposition+"<"+array.length);
+	 if(nposition<array.length && st!=0)
+	 {  //$("#next").bind('click');
+	// alert("coming");
+		if(pincrmnt==0)
+		{
+		pincrmnt=1;
+	 	get_data2(array[nposition]);
+		}
+		}
+		else
+		{
+
+		}
+
+	});
+	function get_data1(c)
+	{
+	var s1=c;
+	var http = new XMLHttpRequest();
+		var postdata= "module=nearby&identity="+s1+"&data=normal"; //Probably need the escape method for values here, like you did
+//alert(postdata);
+		http.open("http://www.pondytourism.in/POST", "http://www.pondytourism.in/get_nearby_data.php", true);
+
+		http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		http.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+		http.onreadystatechange = function() {
+		if(http.readyState == 4 && http.status == 200)
+			{
+				nincrmnt=0;
+				if(http.responseText!="undefined")
+				{
+				$(".nearby-side-menu li a").removeClass('active sizeit');
+				//alert("#"+c);
+				$("#"+c+" a").addClass('active sizeit');
+
+				$("#dynamic_data,#next,#prev").fadeTo("fast",0, function() {$("#dynamic_data").html(http.responseText);$('.sizeit').trigger('click');
+				 });
+				}
+
+
+
+			}
+		}
+		http.send(postdata);
+	}
+
+	function get_data2(c)
+	{
+	//alert(c);
+	var s1=c;
+	var http = new XMLHttpRequest();
+		var postdata= "module=nearby&identity="+s1+"&data=normal"; //Probably need the escape method for values here, like you did
+//alert(postdata);
+		http.open("http://www.pondytourism.in/POST", "http://www.pondytourism.in/get_nearby_data.php", true);
+
+		http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		http.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+		http.onreadystatechange = function() {
+		if(http.readyState == 4 && http.status == 200)
+			{  //alert(http.responseTex);
+				pincrmnt=0;
+				if(http.responseText!="undefined")
+				{
+				$(".nearby-side-menu li a").removeClass('active sizeit');
+				//alert("#"+c);
+				$("#"+c+" a").addClass('active sizeit');
+				$("#dynamic_data,#next,#prev").fadeTo("fast",0, function() {$("#dynamic_data").html('');$("#dynamic_data").html(http.responseText);$('.sizeit').trigger('click');
+				 });
+				}
+
+
+
+			}
+		}
+		http.send(postdata);
+	}
+	function hide_elements()
+	{
+	 $("#dynamic_data,#next,#prev").css("display","none");
+	}
+    </script>
+	<script src="http://www.pondytourism.in/js/custom-functions.js"></script>
+
+	<script type="text/javascript">
+
+
+		$.fn.equalizeHeights = function(){
+		return this.height( Math.max.apply(this, $(this).map(function(i,e){ return $(e).height() }).get() ) )
+		}
+
+
+		//alert($('#experience-detail').height() - 44);
+    </script>
+	<script>
+
+// tourpondy analystics
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47863969-1', 'auto');
+  ga('create', 'UA-55159139-1', 'auto', {'name': 'newTracker'});
+
+  ga('send', 'pageview');
+  ga('newTracker.send', 'pageview');
+
+</script>
+
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	var google_conversion_id = 962262934;
+	var google_custom_params = window.google_tag_params;
+	var google_remarketing_only = true;
+	/* ]]> */
+	</script>
+	<script type="text/javascript" src="../www.googleadservices.com/pagead/f.txt">
+	</script>
+	<noscript>
+	<div style="display:inline;">
+	<img height="1" width="1" style="border-style:none;" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/962262934/?value=0&amp;guid=ON&amp;script=0"/>
+	</div>
+	</noscript>
+  </body>
+</html>
